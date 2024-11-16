@@ -1,0 +1,4 @@
+# .gitignore
+__pycache__/
+__init__
+.DS_Store

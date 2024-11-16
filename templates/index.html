@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Don Fox's Home Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+  <style>
+    .content {
+      text-align: justify;
+      text-justify: inter-word;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <br>
+    <div style="text-align: center;">
+      <img src="static/images/don.jpg" alt="Don Fox's personal photo" height="255" width="255">
+      <h2>Don Fox</h2>
+      <p>Welcome to my professional portfolio—a space dedicated to exploring computer science, mathematics, and the digital frontier.</p>
+    </div>
+    <br>
+  </header>
+
+  <main>
+    <section class="intro content">
+      <p>
+        With over 25 years of experience in software development across diverse fields—such as telecommunications, warehousing, medical records processing, and bioinformatics—I bring a strong background in backend development on Unix-like platforms using the GNU toolchain. My journey has largely been backend-focused, dealing with relational databases and various programming languages, though I’ve also had the opportunity to work on web development projects.
+      </p>
+
+      <p>
+        Moving forward, I aim to build a rich portfolio of projects that leverage computing not only for practical applications but also for exploring deeper theoretical and philosophical questions in computer science and mathematics. My interests span from the foundational works of Gödel and Spencer-Brown to modern advancements in cryptocurrency and Blockchain technologies. I’m particularly fascinated by the intersection of computation and logic, and how these ideas shape the way we understand digital systems and mathematical theory.
+      </p>
+
+      <p>
+        Through this site, I plan to showcase projects on GitHub that reflect these interests, exploring topics such as algorithmic logic, Blockchain infrastructure, and the theoretical underpinnings of computing. As time permits, I'll also include references to books, articles, and resources that inspire my work. This platform will evolve to reflect my ongoing engagement with both established and emerging ideas in technology and mathematics.
+      </p>
+    </section>
+
+    <section class="construction">
+  <p><strong>SITE UNDER CONSTRUCTION!</strong></p>
+  <p>
+    The Flask version will allow dynamic features to be added, such as maintaining a list of visitors who download resumes. As time permits, I may also refer to books, articles, links, etc., that interest me. Additionally, I will showcase a software project portfolio on GitHub to explore topics of interest.
+  </p>
+</section>
+  </main>
+
+  <footer>
+    <br>
+    <a href="{{ url_for('resume') }}">View Resume</a><br>
+    <a href="static/images/Recomendation_Dave_Schultz.jpg">References and Recommendations</a><br>
+    <a href="{{ url_for('books') }}">Books related to Computing</a>
+  </footer>
+
+</body>
+
+</html>

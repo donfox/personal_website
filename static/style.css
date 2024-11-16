@@ -1,0 +1,183 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General layout and typography */
+body {
+  font-family: 'Tahoma', sans-serif;
+  font-size: 1rem; /* Set a base font size */
+  background: linen;
+  color: darkblue;
+  max-width: 950px;
+  line-height: 1.0; /* Optional: improves readability */
+  margin: 15px auto;
+}
+
+main {
+  font-size: 1.05rem;
+  margin: 0 15px;
+}
+
+/* Header and contact information */
+header {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1.2rem;
+}
+
+.contact_info {
+  text-align: center;
+  font-size: 0.95rem;
+  color: navy;
+}
+
+/* Headings */
+h2, h3, h4 {
+  color: navy;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+h2 { font-size: 1.6rem; }
+h3 { font-size: 1.3rem; }
+h4 { font-size: 1.1rem; }
+
+/* Section titles and summary */
+.section-title, .summary {
+  font-size: 1.3rem;
+  margin: 15px 0;
+  padding-bottom: 5px;
+}
+
+/* Text styling */
+p.experience, p.focus {
+  margin: 0 auto;
+  text-align: justify;
+}
+
+
+.summary ul {
+  margin-left: 20px;
+  color: navy;
+}
+
+/* Summary section */
+.summary {
+    font-size: 1.0rem; /* Adjust this value as needed */
+    line-height: 1.4;
+    color: darkblue;
+}
+
+/* Job and company information */
+.job-title, .emrts-role {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: navy;
+}
+
+.company-info, .job-details {
+  font-size: 0.95rem;
+  color: darkblue;
+  margin: 8px 0 15px;
+}
+
+.emrts-location {
+  font-style: italic;
+  color: darkblue;
+}
+
+/* List styling */
+ul {
+  padding-left: 1em;
+  margin-left: 0;
+}
+
+ul li {
+  margin-bottom: 0.5em;
+}
+
+ul.responsibilities {
+  list-style-type: square;
+  color: navy;
+}
+
+/* EMRTS-specific link styles */
+.emrts a {
+  color: darkblue;
+  text-decoration: none;
+}
+
+.emrts a:hover {
+  text-decoration: underline;
+}
+
+/* Construction class styling */
+div.construction {
+  padding: 7px;
+  border: 3px solid maroon;
+  background: ivory;
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  color: navy;
+  padding-top: 10px;
+
+}
+
+footer nav a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #555;
+}
+
+/* Link styles */
+a {
+  color: navy;
+}
+
+a:visited {
+  color: purple;
+}
+
+a:hover {
+  color: darkred;
+  text-decoration: underline;
+}
+
+* Form alignment and spacing */
+.request-resume form {
+  display: flex;
+  flex-direction: column;
+}
+
+.request-resume label,
+.request-resume input,
+.request-resume button {
+  margin-top: 0.5em;
+}
+
+
+/* Responsive media queries */
+@media only screen and (max-width: 400px) {
+  body {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+
+  h2 { font-size: 1.4rem; }
+  h3 { font-size: 1.2rem; }
+  h4 { font-size: 1.0rem; }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  body { width: 90%; }
+}
+
+@media only screen and (min-width: 961px) {
+  body { max-width: 960px; }
+}
