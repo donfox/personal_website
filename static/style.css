@@ -1,18 +1,33 @@
 /* Reset styles */
 * {
   margin: 0;
+  /* Reset styles */
+* {
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* General layout and typography */
+/* Variables for Consistent Styling */
+:root {
+  --font-primary: 'Tahoma', sans-serif;
+  --font-size-base: 1rem;
+  --color-bg: linen;
+  --color-text: darkblue;
+  --color-accent: navy;
+  --color-hover: darkred;
+  --color-success: green;
+  --color-danger: red;
+}
+
+/* General Styles */
 body {
-  font-family: 'Tahoma', sans-serif;
-  font-size: 1rem; /* Set a base font size */
-  background: linen;
-  color: darkblue;
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  background: var(--color-bg);
+  color: var(--color-text);
   max-width: 950px;
-  line-height: 1.0; /* Optional: improves readability */
+  line-height: 1.0; /* Improved readability */
   margin: 15px auto;
 }
 
@@ -21,22 +36,19 @@ main {
   margin: 0 15px;
 }
 
-/* Header and contact information */
-header {
+header .contact_info {
   text-align: center;
   padding: 10px 0;
-  font-size: 1.2rem;
 }
 
 .contact_info {
-  text-align: center;
   font-size: 0.95rem;
-  color: navy;
+  color: var(--color-accent);
 }
 
 /* Headings */
 h2, h3, h4 {
-  color: navy;
+  color: var(--color-accent);
   font-weight: normal;
   margin-bottom: 5px;
 }
@@ -47,72 +59,254 @@ h4 { font-size: 1.1rem; }
 
 /* Section titles and summary */
 .section-title, .summary {
-  font-size: 1.3rem;
   margin: 15px 0;
   padding-bottom: 5px;
 }
 
-/* Text styling */
-p.experience, p.focus {
-  margin: 0 auto;
-  text-align: justify;
-}
-
-
-.summary ul {
-  margin-left: 20px;
-  color: navy;
-}
-
-/* Summary section */
 .summary {
-    font-size: 1.0rem; /* Adjust this value as needed */
-    line-height: 1.4;
-    color: darkblue;
+  color: var(--color-text);
 }
 
-/* Job and company information */
-.job-title, .emrts-role {
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: navy;
-}
-
-.company-info, .job-details {
-  font-size: 0.95rem;
-  color: darkblue;
-  margin: 8px 0 15px;
-}
-
-.emrts-location {
-  font-style: italic;
-  color: darkblue;
-}
-
-/* List styling */
 ul {
   padding-left: 1em;
-  margin-left: 0;
 }
 
 ul li {
   margin-bottom: 0.5em;
 }
 
-ul.responsibilities {
-  list-style-type: square;
-  color: navy;
-}
-
-/* EMRTS-specific link styles */
-.emrts a {
-  color: darkblue;
+/* Buttons, Forms, and Links */
+a {
+  color: var(--color-accent);
   text-decoration: none;
 }
 
-.emrts a:hover {
+a:hover {
+  color: var(--color-hover);
   text-decoration: underline;
 }
+
+/* Updated styles for the email request form */
+.request-resume {
+  text-align: center; /* Centers the entire section */
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+  border: 1px solid #ddd; /* Subtle border */
+  border-radius: 8px; /* Rounded corners for a modern look */
+}
+
+.request-resume form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers form elements horizontally */
+  gap: 10px; /* Space between elements */
+}
+
+.request-resume input[type="email"] {
+  width: 100%; /* Full-width input */
+  max-width: 400px; /* Prevent it from being too wide */
+  padding: 10px; /* Add space inside the input */
+  border: 1px solid #ccc; /* Subtle border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 1rem; /* Match body text size */
+}
+
+.request-resume button {
+  width: 100%; /* Full-width button */
+  max-width: 200px; /* Prevent it from being too wide */
+  padding: 10px 20px; /* Add padding for better tap targets */
+  border: none; /* Remove default button border */
+  border-radius: 4px; /* Rounded corners */
+  background-color: var(--color-accent); /* Consistent button color */
+  color: white; /* White text for contrast */
+  font-size: 1rem;
+  cursor: pointer; /* Pointer cursor to indicate it's clickable */
+}
+
+.request-resume button:hover {
+  background-color: var(--color-hover); /* Slightly darker on hover */
+}
+
+@media (max-width: 600px) {
+  .request-resume form {
+    width: 90%; /* Shrink form width for smaller screens */
+  }
+
+  .request-resume input[type="email"],
+  .request-resume button {
+    max-width: 100%; /* Allow full-width on very small devices */
+  }
+}
+
+/* Flash Messages */
+.flash-messages {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.flash-messages.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.flash-messages.danger {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Construction class styling */
+div.construction {
+  padding: 7px;
+  border: 3px solid maroon;
+  background: ivory;
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  color: navy;
+  padding-top: 10px;
+}
+
+footer nav a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #555;
+}: 0;
+  box-sizing: border-box;
+}
+
+/* Variables for Consistent Styling */
+:root {
+  --font-primary: 'Tahoma', sans-serif;
+  --font-size-base: 1rem;
+  --color-bg: linen;
+  --color-text: darkblue;
+  --color-accent: navy;
+  --color-hover: darkred;
+  --color-success: green;
+  --color-danger: red;
+}
+
+/* General Styles */
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  background: var(--color-bg);
+  color: var(--color-text);
+  max-width: 950px;
+  line-height: 1.0; /* Improved readability */
+  margin: 15px auto;
+}
+
+main {
+  font-size: 1.05rem;
+  margin: 0 15px;
+}
+
+header .contact_info {
+  text-align: center;
+  padding: 10px 0;
+/*  font-size: 1.2rem;*/
+}
+
+.contact_info {
+  font-size: 0.95rem;
+  color: var(--color-accent);
+}
+
+/* Headings */
+h2, h3, h4 {
+  color: var(--color-accent);
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+h2 { font-size: 1.6rem; }
+h3 { font-size: 1.3rem; }
+h4 { font-size: 1.1rem; }
+
+/* Section titles and summary */
+.section-title, .summary {
+  margin: 15px 0;
+  padding-bottom: 5px;
+}
+
+.summary {
+  color: var(--color-text);
+}
+
+ul {
+  padding-left: 1em;
+}
+
+ul li {
+  margin-bottom: 0.5em;
+}
+
+
+/* Buttons, Forms, and Links */
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-hover);
+  text-decoration: underline;
+}
+
+.request-resume form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em; /* Simplifies spacing */
+}
+
+/* Flash Messages */
+.flash-messages {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.flash-messages.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.flash-messages.danger {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Media Queries */
+@media (max-width: 400px) {
+  body {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+  h2 { font-size: 1.4rem; }
+  h3 { font-size: 1.2rem; }
+  h4 { font-size: 1.0rem; }
+}
+
+@media (min-width: 401px) and (max-width: 960px) {
+  body { width: 90%; }
+}
+
+@media (min-width: 961px) {
+  body { max-width: 960px; }
+}
+
 
 /* Construction class styling */
 div.construction {
@@ -140,44 +334,11 @@ a {
   color: navy;
 }
 
-a:visited {
-  color: purple;
-}
-
-a:hover {
-  color: darkred;
-  text-decoration: underline;
-}
-
-* Form alignment and spacing */
-.request-resume form {
-  display: flex;
-  flex-direction: column;
-}
-
-.request-resume label,
-.request-resume input,
-.request-resume button {
-  margin-top: 0.5em;
-}
 
 
-/* Responsive media queries */
-@media only screen and (max-width: 400px) {
-  body {
-    width: 90%;
-    font-size: 0.9rem;
-  }
 
-  h2 { font-size: 1.4rem; }
-  h3 { font-size: 1.2rem; }
-  h4 { font-size: 1.0rem; }
-}
 
-@media only screen and (min-width: 401px) and (max-width: 960px) {
-  body { width: 90%; }
-}
 
-@media only screen and (min-width: 961px) {
-  body { max-width: 960px; }
-}
+
+
+
