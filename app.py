@@ -1,30 +1,20 @@
-import logging
-from logging.handlers import RotatingFileHandler
 import os
-from flask import Flask, render_template, redirect, url_for, request, flash
+import logging
+from project_logging_config import setup_logging
+setup_logging
+
+from flask import Flask, render_template, redirect, url_for, request, flash, current_app
 from flask_mail import Mail, Message
-from dotenv import load_dotenv
-load_dotenv()
+from mail_config import Config
 
-# Instantiate Flask application
 app = Flask(__name__)
+app.logger.info("Application started successfully.")
+MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD', 'fallback-password')
+print(f"MAIL_PASSWORD {MAIL_PASSWORD}")
 
-# Configure logging
-log_file = "app.log"  # Path to the log file
-log_handler = RotatingFileHandler(log_file, maxBytes=100000, backupCount=1)  # Rotates logs when file reaches 100 KB
-log_handler.setLevel(logging.INFO)  # Set log level (INFO, DEBUG, etc.)
-log_formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
-log_handler.setFormatter(log_formatter)
-app.logger.addHandler(log_handler)
-
-# Configure application using environment variables
-app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
-app.config['MAIL_SERVER'] = os.getenv('MAIL_SERVER')
-app.config['MAIL_PORT'] = int(os.getenv('MAIL_PORT', 587))  # Default to 587
-app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
-app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
-app.config['MAIL_USE_TLS'] = os.getenv('MAIL_USE_TLS') == 'True'
-app.config['MAIL_USE_SSL'] = os.getenv('MAIL_USE_SSL') == 'True'
+app.config.from_object(Config)
+app.config['MAIL_DEBUG'] = True
+app.config['MAIL_PASSWORD'] = 'mllq-ilna-fkha-ovba'  
 
 # Validate critical configurations and log
 if not app.config['MAIL_SERVER']:
@@ -47,9 +37,13 @@ if not os.path.exists(RESUME_PATH):
     app.logger.error(f"Resume file not found at {RESUME_PATH}")
     raise FileNotFoundError(f"Resume file not found at {RESUME_PATH}")
 
+print(f"MAIL_USERNAME: {app.config['MAIL_USERNAME']}")
+print(f"MAIL_PASSWORD: {app.config['MAIL_PASSWORD']}")
+
 @app.route("/")
 def index():
     return render_template('index.html')
+
 
 @app.route('/resume', methods=['GET', 'POST'])
 def resume():
@@ -59,38 +53,31 @@ def resume():
             flash("Email is required!", "danger")
             return redirect(url_for('resume'))
 
-        # Sending the resume via email
         try:
+            # Create the email
             msg = Message(
                 "Your Requested Resume",
-                sender=app.config['MAIL_USERNAME'],
-                recipients=[user_email]
+                sender=app.config['MAIL_USERNAME'],  # Sender is your iCloud email
+                recipients=[user_email]  # Recipient from the form
             )
-            msg.body = "Here is the resume you requested. Feel free to reach out for any further inquiries."
+            msg.body = "Here is the resume you requested. Please feel free to reach out for more information."
+
+            # Attach the resume
             with app.open_resource(RESUME_PATH) as fp:
                 msg.attach("Resume.v2.pdf", "application/pdf", fp.read())
+
+            # Send the email
             mail.send(msg)
             flash("Resume sent successfully!", "success")
+        except FileNotFoundError:
+            flash("Resume file not found. Please contact support.", "danger")
         except Exception as e:
             app.logger.error(f"Failed to send resume to {user_email}: {e}")
             flash(f"Failed to send resume. Error: {str(e)}", "danger")
 
         return redirect(url_for('resume'))
 
-    return render_template('resume.html')
-
-@app.route('/test_email')
-def test_email():
-    try:
-        msg = Message("Test Email",
-                      sender=app.config['MAIL_USERNAME'],
-                      recipients=["your_email@example.com"])  # Replace with your email
-        msg.body = "This is a test email to confirm the configuration."
-        mail.send(msg)
-        return "Test email sent successfully!"
-    except Exception as e:
-        app.logger.error(f"Failed to send test email: {e}")
-        return f"Failed to send test email: {str(e)}"
+    return render_template('resume.html')  # Renders a form to request the resume
 
 
 @app.route("/books")
@@ -98,6 +85,7 @@ def books():
     return render_template('books.html')
 
 if __name__ == '__main__':
+    app.logger.info("Starting Flask application.")
     app.run(debug=True)
 
 
