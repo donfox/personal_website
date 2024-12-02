@@ -230,12 +230,21 @@
         {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}
             <div class="flash-messages">
+              {% with messages = get_flashed_messages(with_categories=true) %}
+              {% if messages %}
+                {% for category, message in messages %}
+                    <p class="{{ category }}">{{ message }}</p>
+                {% endfor %}
+              {% endif %}
+              {% endwith %}
+            </div>
+            <!-- <div class="flash-messages">
                 <ul>
                   {% for category, message in messages %}
                       <li class="{{ category }}">{{ message }}</li>
                   {% endfor %}
                 </ul>
-            </div>
+            </div> -->
         {% endif %}
         {% endwith %}
         <!-- Form Section -->
