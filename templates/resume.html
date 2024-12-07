@@ -238,23 +238,23 @@
               {% endif %}
               {% endwith %}
             </div>
-            <!-- <div class="flash-messages">
-                <ul>
-                  {% for category, message in messages %}
-                      <li class="{{ category }}">{{ message }}</li>
-                  {% endfor %}
-                </ul>
-            </div> -->
         {% endif %}
         {% endwith %}
+
         <!-- Form Section -->
         
         <form action="{{ url_for('resume') }}" method="post">
-          <label for="email">Enter your email address:</label>
-          <input type="email" id="email" name="email" required>
-          <button type="submit">Request Resume</button>
-        </form>
-      </section>
+        <label for="name">Enter your full name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Enter your email address:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <button type="submit">Request Resume</button>
+    </form>
+
+   </section>
+
     </main>
 
     <footer>

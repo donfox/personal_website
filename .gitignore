@@ -1,6 +1,9 @@
 # .gitignore
+*.pyc
 __pycache__/
 __init__
 .DS_Store
 .env
 utilities/
+instance
+*.sqlite3
