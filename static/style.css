@@ -11,6 +11,11 @@ img {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Soft shadow */
 }
 
+header {
+  text-align: center; /* Centers text horizontally */
+  margin: 20px auto; /* Adds space above and below */
+}
+
 /* Variables for Consistent Styling */
 :root {
   --font-primary: 'Roboto', sans-serif;
