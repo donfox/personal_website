@@ -14,6 +14,9 @@ img {
 header {
   text-align: center; /* Centers text horizontally */
   margin: 20px auto; /* Adds space above and below */
+  
+  padding: 10px 0;
+  font-size: 1.2rem;
 }
 
 /* Variables for Consistent Styling */
