@@ -1,7 +1,20 @@
+"""
+app.py
+-------
+This file contains the main Flask application, including routes, 
+database setup, and email functionality.
+
+Key Features:
+- Entry point for the application.
+- Manages routes for rendering HTML templates and handling user requests.
+- Includes functionality for sending emails with attachments.
+
+Author: DOn Fox
+Date: 12/10/2024
+"""
 import os
 import logging
 import smtplib
-
 from flask import Flask, render_template, redirect, url_for, request, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_mail import Mail, Message
@@ -9,22 +22,24 @@ from models import db, EmailRequest
 from config import Config
 import re
 
-# Initialize the app
+# Initialize Flask app with configuration.
 app = Flask(__name__)
 app.config.from_object(Config)
 
-# Database setup
+# Initialize database
 db.init_app(app)
 
-# Initialize logging configuration
-Config.setup_logging()
-
-# Initializr logging
+# Set up logging
 Config.setup_logging()
 logger = logging.getLogger(__name__)
 
 def validate_config():
-    """Validate critical configurations and log errors if necessary"""
+    """
+    Validate critical configurations like MAIL_SERVER and MAIL_USERNAME.
+
+    Raises:
+        RuntimeError: If critical configurations are missing.
+    """
     if not app.config['MAIL_SERVER']:
         app.logger.error("MAIL_SERVER is not set. Check environment variables.")
         raise RuntimeError("MAIL_SERVER is required but not set.")
@@ -34,16 +49,28 @@ def validate_config():
 
 validate_config()
 
-# Resume file path
+# Set the resume file path and ensure it exists
 RESUME_PATH = os.path.join(app.static_folder, 'files', 'Resume.v2.pdf')
 if not os.path.exists(RESUME_PATH):
     app.logger.error(f"Resume file not found at {RESUME_PATH}")
     raise FileNotFoundError(f"Resume file not found at {RESUME_PATH}")
 
+# Initialize Flask-Mail
 mail = Mail(app)
 
 def send_email(recipient, subject, body, attachment_path):
-    """Send an email with an attachment."""
+    """
+    Send an email with an attachment.
+
+    Args:
+        recipient (str): The recipient's email address.
+        subject (str): The subject line of the email.
+        body (str): The body text of the email.
+        attachment_path (str): File path of the attachment.
+
+    Returns:
+        bool: True if email is successfully sent, False otherwise.
+    """
     try:
         logger.info(f"Attempting to send email to {recipient}")
         msg = Message(subject, sender=app.config['MAIL_USERNAME'], recipients=[recipient])
@@ -63,14 +90,26 @@ def send_email(recipient, subject, body, attachment_path):
         logger.error(f"Unexpected error: {e}")
     return False
 
+
 # Routes
 @app.route("/")
+"""Render the home page."""
 def index():
     return render_template('index.html')
 
 
 @app.route('/resume', methods=['GET', 'POST'])
 def resume():
+    """
+    Handle resume requests via a form.
+
+    GET:
+        Render the resume request form.
+    POST:
+        - Validate email input.
+        - Record the request in the database.
+        - Email the resume to the provided address.
+    """
     if request.method == 'POST':
         user_name = request.form.get('name')  
         user_email = request.form.get('email')
@@ -110,10 +149,13 @@ def resume():
 
 @app.route("/books")
 def books():
+    """Render the books page."""
     return render_template('books.html')
+
 
 if __name__ == '__main__':
     with app.app_context():
+        # Create all tables before the app starts
         db.create_all()
 
     logger.info("Starting Flask application.")

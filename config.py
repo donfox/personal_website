@@ -1,3 +1,13 @@
+"""
+config.py
+---------
+This file defines the configuration settings for the Flask application,
+including database connection, email server configuration, and logging.
+
+Author:Don Fox
+Date: 12/10/2024
+"""
+
 import os
 from dotenv import load_dotenv
 from logging.handlers import RotatingFileHandler
@@ -8,6 +18,26 @@ load_dotenv()
 
 
 class Config:
+    """
+    Configuration class for the Flask application.
+
+    Attributes:
+        SECRET_KEY (str): Secret key for session management.
+        SQLALCHEMY_DATABASE_URI (str): URI for the SQLite database.
+        SQLALCHEMY_TRACK_MODIFICATIONS (bool): Toggle for modification tracking.
+        MAIL_SERVER (str): SMTP server for sending emails.
+        MAIL_PORT (int): Port used by the mail server.
+        MAIL_USE_TLS (bool): Enable TLS encryption for emails.
+        MAIL_USE_SSL (bool): Enable SSL encryption for emails.
+        MAIL_USERNAME (str): Username for the mail server.
+        MAIL_PASSWORD (str): Password for the mail server.
+        MAIL_DEFAULT_SENDER (str): Default sender email address.
+        LOG_DIR (str): Directory for storing log files.
+        LOG_FILE (str): Path to the primary log file.
+        MAX_LOG_SIZE (int): Maximum size of each log file in bytes.
+        BACKUP_COUNT (int): Number of backup log files to retain.
+    """
+
     # General Flask settings
     SECRET_KEY = os.environ.get('SECRET_KEY', 'default-secret-key')
     SQLALCHEMY_DATABASE_URI = 'sqlite:///app.db'
@@ -33,7 +63,13 @@ class Config:
 
     @staticmethod
     def setup_logging():
-        """Set up logging configuration."""
+        """
+        Configure the application's logging system.
+
+        - Creates a rotating file handler to log messages to a file.
+        - Logs messages to the console for development purposes.
+        """
+        
         if not os.path.exists(Config.LOG_DIR):
             os.makedirs(Config.LOG_DIR)
 

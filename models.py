@@ -1,8 +1,20 @@
+"""
+models.py
+---------
+This file defines the database models for the Flask application.
+
+Key Features:
+- Models are implemented using SQLAlchemy ORM.
+- Includes the `EmailRequest` model to log user requests for email communications.
+
+Author: Don Fox
+Date: 12/10/2024
+"""
+
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
 db = SQLAlchemy()
-
 
 class EmailRequest(db.Model):
     __tablename__ = 'EmailRequest'
