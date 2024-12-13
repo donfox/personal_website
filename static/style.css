@@ -5,20 +5,6 @@
   box-sizing: border-box;
 }
 
-img {
-  border: 2px solid #ddd; /* Subtle border */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Soft shadow */
-}
-
-header {
-  text-align: center; /* Centers text horizontally */
-  margin: 20px auto; /* Adds space above and below */
-  
-  padding: 10px 0;
-  font-size: 1.2rem;
-}
-
 /* Variables for Consistent Styling */
 :root {
   --font-primary: 'Roboto', sans-serif;
@@ -27,6 +13,9 @@ header {
   --color-text: darkblue;
   --color-accent: navy;
   --color-hover: darkred;
+  --border-radius: 8px;
+  --shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  --border-color: #ddd;
 }
 
 /* General Styles */
@@ -80,6 +69,21 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Images */
+img {
+  border: 2px solid var(--border-color); /* Subtle border */
+  border-radius: var(--border-radius); /* Rounded corners */
+  box-shadow: var(--shadow); /* Soft shadow */
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin: 20px auto;
+  padding: 10px 0;
+  font-size: 1.2rem;
+}
+
 /* Footer */
 footer {
   text-align: center;
@@ -87,12 +91,7 @@ footer {
   padding-top: 10px;
 }
 
-.request-resume {
-  text-align: center;
-  margin: 20px auto;
-}
-
-
+/* Forms */
 input[type="email"], button {
   padding: 10px;
   margin: 10px 0;
@@ -100,11 +99,16 @@ input[type="email"], button {
   border: 1px solid #ccc;
 }
 
-
+/* Flash Messages */
 .flash-messages ul {
   list-style-type: none; /* Removes bullet points */
-  margin: 0; /* Removes default margins */
-  padding: 0; /* Removes default padding */
+  margin: 0;
+  padding: 0;
+}
+
+.request-resume {
+  text-align: center;
+  margin: 20px auto;
 }
 
 /* Media Queries */
