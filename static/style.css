@@ -1,124 +1,75 @@
-/* Reset styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-/* Variables for Consistent Styling */
-:root {
-  --font-primary: 'Roboto', sans-serif;
-  --font-size-base: 1rem;
-  --color-bg: #fff8e1; /* Soft warm yellow */
-  --color-text: darkblue;
-  --color-accent: navy;
-  --color-hover: darkred;
-  --border-radius: 8px;
-  --shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  --border-color: #ddd;
-}
-
-/* General Styles */
+/* General Body Styling */
 body {
   font-family: var(--font-primary);
   font-size: var(--font-size-base);
   background: var(--color-bg);
   color: var(--color-text);
-  max-width: 950px;
-  line-height: 1.5; /* Improved readability */
-  margin: 15px auto;
-}
-
-main {
-  font-size: 1.05rem;
-  margin: 0 15px;
-}
-
-p {
-  margin-bottom: 1em; /* Adds spacing between paragraphs */
-}
-
-/* Headings */
-h2, h3, h4 {
-  color: var(--color-accent);
-  font-weight: normal;
-  margin-bottom: 5px;
-}
-
-h2 { font-size: 1.6rem; }
-h3 { font-size: 1.3rem; }
-h4 { font-size: 1.1rem; }
-
-/* Lists */
-ul {
-  padding-left: 1.5em;
-}
-
-ul li {
-  margin-bottom: 0.5em;
-}
-
-/* Links */
-a {
-  color: var(--color-accent);
-  text-decoration: none;
-}
-
-a:hover {
-  color: var(--color-hover);
-  text-decoration: underline;
-}
-
-/* Images */
-img {
-  border: 2px solid var(--border-color); /* Subtle border */
-  border-radius: var(--border-radius); /* Rounded corners */
-  box-shadow: var(--shadow); /* Soft shadow */
-}
-
-/* Header */
-header {
-  text-align: center;
-  margin: 20px auto;
-  padding: 10px 0;
-  font-size: 1.2rem;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  color: navy;
-  padding-top: 10px;
-}
-
-/* Forms */
-input[type="email"], button {
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-}
-
-/* Flash Messages */
-.flash-messages ul {
-  list-style-type: none; /* Removes bullet points */
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
   margin: 0;
-  padding: 0;
+  padding: 20px;
 }
 
-.request-resume {
-  text-align: center;
-  margin: 20px auto;
+/* Main Container - Centers Content */
+.container {
+  width: 100%;
+  max-width: 950px;
+  padding: 20px;
+  margin: auto;
 }
 
-/* Media Queries */
-@media (max-width: 600px) {
-  body {
+/* Centered Header Content (Name and Contact Details) */
+header {
+  text-align: center; /* Center everything inside the header */
+}
+
+header h1 {
+  margin-bottom: 10px; /* Space below the name */
+}
+
+header address {
+  margin-top: 0;
+  font-style: normal; /* Ensures clean text styling */
+  line-height: 1.4; /* Improves spacing between lines */
+}
+
+/* Left-Aligned Underlined Headers */
+h4 {
+  text-align: left; /* Left-align specific headers */
+  text-decoration: underline;
+  margin-top: 20px;
+}
+
+/* Paragraph and List Alignment */
+p, ul, li {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+/* Images - Centered */
+img {
+  display: block;
+  margin: 0 auto;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+/* Media Query for Small Devices */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
     width: 90%;
-    font-size: 0.9rem;
   }
+}
 
-  h2 { font-size: 1.4rem; }
-  h3 { font-size: 1.2rem; }
-  h4 { font-size: 1.0rem; }
+/* Center Footer Content */
+footer {
+  text-align: center; /* Centers text content horizontally */
+  margin: 20px auto;  /* Adds margin and centers horizontally */
+  padding: 10px 0;    /* Vertical padding */
 }

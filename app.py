@@ -1,17 +1,12 @@
 """
 app.py
--------
-This file contains the main Flask application, including routes, 
-database setup, and email functionality.
+Entry point of the application, manageing routes for rendering HTML templates
+and handling user requests for sending emails with attachments.
 
-Key Features:
-- Entry point for the application.
-- Manages routes for rendering HTML templates and handling user requests.
-- Includes functionality for sending emails with attachments.
-
-Author: DOn Fox
+Author: Don Fox
 Date: 12/10/2024
 """
+
 import os
 import logging
 import smtplib
@@ -35,10 +30,7 @@ logger = logging.getLogger(__name__)
 
 def validate_config():
     """
-    Validate critical configurations like MAIL_SERVER and MAIL_USERNAME.
-
-    Raises:
-        RuntimeError: If critical configurations are missing.
+    Validates MAIL_SERVER and MAIL_USERNAME configuration values.
     """
     if not app.config['MAIL_SERVER']:
         app.logger.error("MAIL_SERVER is not set. Check environment variables.")
@@ -60,13 +52,7 @@ mail = Mail(app)
 
 def send_email(recipient, subject, body, attachment_path):
     """
-    Send an email with an attachment.
-
-    Args:
-        recipient (str): The recipient's email address.
-        subject (str): The subject line of the email.
-        body (str): The body text of the email.
-        attachment_path (str): File path of the attachment.
+    Send email with resume attachment.
 
     Returns:
         bool: True if email is successfully sent, False otherwise.
@@ -109,7 +95,6 @@ def send_email(recipient, subject, body, attachment_path):
 # Routes
 @app.route("/")
 def index():
-    """ Render the index  page """
     return render_template('index.html')
 
 
@@ -176,7 +161,6 @@ def resume():
 
 @app.route("/books")
 def books():
-    """Render the books page."""
     return render_template('books.html')
 
 
@@ -187,3 +171,4 @@ if __name__ == '__main__':
 
     logger.info("Starting Flask application.")
     app.run(debug=True)
+

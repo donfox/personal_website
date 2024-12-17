@@ -15,14 +15,26 @@
 <body>
   <div class="container">
   <header>
+  <div class="text-center">
+    <h3 class="name-header" style="margin-bottom: 10px;">Don Fox</h3>
+    <address style="font-style: normal; line-height: 1.5;">
+      896 Hereford Dr.<br>
+      Akron OH 44303<br>
+      <a href="mailto:donfox1@mac.com">donfox1@mac.com</a><br>
+      (865) 360-0089
+    </address>
+  </div>
+</header>  
+
+  <!-- <header>
       <address class="contact_info">
         <h4>Don Fox</h4>
-        896 Hereford Dr.<br>
+        896 Hereford Dr.<br>s
         Akron OH 44303<br>
         <a href="mailto:donfox1@mac.com">donfox1@mac.com</a><br>
         (865) 360-0089<br>
       </a>
-    </header>
+    </header> -->
 
     <main>
       <section class="summary">
@@ -246,6 +258,28 @@
 
               <!-- Form -->
               <form class="needs-validation" method="POST" action="/resume" novalidate>
+                <div class="row mb-3 align-items-center">
+                <label for="name" class="col-sm-3 col-form-label">Your Full Name</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                  </div>
+                </div>
+                <div class="row mb-3 align-items-center">
+                  <label for="email" class="col-sm-3 col-form-label">Email Address</label>
+                <div class="col-sm-9">
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+              </div>
+              <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-9">
+                      <button type="submit" class="btn btn-primary">Request Resume</button>
+                    </div>
+                  </div>
+              </form>
+
+
+              <!-- <form class="needs-validation" method="POST" action="/resume" novalidate>
                   <div class="mb-3">
                       <label for="name" class="form-label">Your Full Name</label>
                       <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
@@ -255,17 +289,18 @@
                       <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
                   </div>
                   <button type="submit" class="btn btn-primary">Request Resume</button>
-              </form>
+              </form> -->
         </div>
 
   </section>
   </main>
 
-    <footer>
-        <br><a href="{{ url_for('index') }}"> Home </a><br>
-        <a href="static/images/Recomendation_Dave_Schultz.jpg">References and Recommendations:</a><br>
-        <a href="{{ url_for('books') }}">Books related to Computing</a>
-    </footer>
+  <footer><br>
+    <a href="{{ url_for('index') }}">Home</a><br>
+    <a href="static/images/Recomendation_Dave_Schultz.jpg">References and Recommendations</a><br>
+    <a href="{{ url_for('books') }}">Books related to Computing</a>
+  </footer>
+  
   </div>
   </body>
 </html>
