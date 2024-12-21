@@ -1,4 +1,3 @@
-
 /* General Body Styling */
 body {
   font-family: var(--font-primary);
@@ -6,12 +5,11 @@ body {
   background: var(--color-bg);
   color: var(--color-text);
   line-height: 1.5;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: 100vh;
   margin: 0;
   padding: 20px;
+  display: flex;
+  flex-direction: column; /* Organize content vertically */
+  min-height: 100vh; /* Ensure full viewport height */
 }
 
 /* Main Container - Centers Content */
@@ -20,37 +18,38 @@ body {
   max-width: 950px;
   padding: 20px;
   margin: auto;
+  flex: 1; /* Push footer to bottom */
 }
 
-/* Centered Header Content (Name and Contact Details) */
+/* Header Content */
 header {
-  text-align: center; /* Center everything inside the header */
+  text-align: center;
 }
 
 header h1 {
-  margin-bottom: 10px; /* Space below the name */
+  margin-bottom: 10px;
 }
 
 header address {
   margin-top: 0;
-  font-style: normal; /* Ensures clean text styling */
-  line-height: 1.4; /* Improves spacing between lines */
+  font-style: normal;
+  line-height: 1.4;
 }
 
-/* Left-Aligned Underlined Headers */
+/* Underlined Headers */
 h4 {
-  text-align: left; /* Left-align specific headers */
+  text-align: left;
   text-decoration: underline;
   margin-top: 20px;
 }
 
-/* Paragraph and List Alignment */
+/* Text and List Styling */
 p, ul, li {
   text-align: left;
   margin-bottom: 1rem;
 }
 
-/* Images - Centered */
+/* Image Styling */
 img {
   display: block;
   margin: 0 auto;
@@ -59,17 +58,36 @@ img {
   box-shadow: var(--shadow);
 }
 
-/* Media Query for Small Devices */
+/* Flash Messages */
+.flash-messages ul {
+  list-style-type: none; /* Removes bullet points */
+  margin: 0;
+  padding: 0;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  margin: 20px auto;
+  padding: 10px 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: #007bff;
+  margin: 5px 0; /* Adjust vertical spacing */
+  display: block; /* Stack links vertically */
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+/* Media Queries for Small Devices */
 @media (max-width: 768px) {
   .container {
     padding: 10px;
     width: 90%;
   }
-}
-
-/* Center Footer Content */
-footer {
-  text-align: center; /* Centers text content horizontally */
-  margin: 20px auto;  /* Adds margin and centers horizontally */
-  padding: 10px 0;    /* Vertical padding */
 }

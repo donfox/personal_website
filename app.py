@@ -8,6 +8,7 @@ Date: 12/10/2024
 """
 
 import os
+import sys
 import logging
 import smtplib
 from flask import Flask, render_template, redirect, url_for, request, flash
@@ -157,7 +158,6 @@ def resume():
         return redirect(url_for('resume'))
 
     return render_template('resume.html')
-
 
 @app.route("/books")
 def books():
