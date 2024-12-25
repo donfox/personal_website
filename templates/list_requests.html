@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2>Manage Requesters</h2>
+    <a href="#" class="btn btn-primary my-3" data-bs-toggle="modal" data-bs-target="#addRequesterModal">Add Requester</a>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for requester in requesters %}
+            <tr>
+                <td>{{ requester.name }}</td>
+                <td>{{ requester.email }}</td>
+                <td>
+                    <!-- Edit Button -->
+                    <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editRequesterModal{{ requester.id }}">Edit</button>
+                    <!-- Delete Form -->
+                    <form method="POST" action="{{ url_for('delete_requester', id=requester.id) }}" style="display:inline;">
+                        <button class="btn btn-sm btn-danger" type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<!-- Add Requester Modal -->
+<div class="modal fade" id="addRequesterModal" tabindex="-1" aria-labelledby="addRequesterModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <form method="POST" action="{{ url_for('add_requester') }}">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addRequesterModalLabel">Add Requester</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Add Requester</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Edit Requester Modal Template (One for Each Requester) -->
+{% for requester in requesters %}
+<div class="modal fade" id="editRequesterModal{{ requester.id }}" tabindex="-1" aria-labelledby="editRequesterModalLabel{{ requester.id }}" aria-hidden="true">
+  <div class="modal-dialog">
+    <form method="POST" action="{{ url_for('edit_requester', id=requester.id) }}">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editRequesterModalLabel{{ requester.id }}">Edit Requester</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" value="{{ requester.name }}" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" value="{{ requester.email }}" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endfor %}
+{% endblock %}
