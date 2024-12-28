@@ -29,8 +29,6 @@ def register_routes(app, mail):
     def index():
         return render_template('index.html')
 
-    # Dynamically check the file during usage
-    from utils import ensure_file_exists
 
     @app.route("/resume", methods=["GET", "POST"])
     def resume():
@@ -41,8 +39,12 @@ def register_routes(app, mail):
 
             logger.info(f"Received request from {user_name} ({user_email}) at {ip_address}")
 
-            # Validate email
-            if not user_email or not re.match(r"[^@]+@[^@]+\.[^@]+", user_email):
+            EMAIL_REGEX = re.compile(
+                r"^[A-Za-z0-9!#$%&'*+/=?^_`{|}~.\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}$"
+            )
+
+            # Validate email 
+            if not user_email or not re.match(EMAIL_REGEX, user_email):
                 flash("Please provide a valid email address!", "danger")
                 logger.warning(f"Invalid email address provided: {user_email}")
                 return redirect(url_for("resume"))

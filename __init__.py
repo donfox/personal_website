@@ -1,20 +1,4 @@
-
-
-# from flask import Flask, send_from_directory
-
-# app = Flask(__name__)
-
-# @app.route('/')
-# def index():
-#   return send_from_directory('static', 'index.html')
-
-# @app.route('/static/<path:path>')
-# def serve_static(path):
-#   return send_from_directory('static', path)
-
-
-
-
+# __init__.py
 
 import os
 print(f"Current working directory: {os.getcwd()}")
@@ -23,7 +7,7 @@ print(f"__file__ directory: {os.path.dirname(__file__)}")
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_mail import Mail
-from .config import Config  # Use a relative import
+from .config import Config
 
 # Initialize extensions globally
 db = SQLAlchemy()
@@ -36,7 +20,7 @@ def create_app():
     app = Flask(__name__)
 
     # Load configuration
-    from config import Config
+    #  from config import Config
     app.config.from_object(Config)
 
     # Initialize extensions

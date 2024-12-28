@@ -1,6 +1,6 @@
 """
 app.py
-Entry point of the application, manageing routes for rendering HTML templates
+Entry point of the application, managing routes for rendering HTML templates
 and handling user requests for sending emails with attachments.
 
 Author: Don Fox
@@ -17,8 +17,7 @@ from models import db
 from config import Config
 from utils import validate_config, ensure_file_exists
 
-
-# Initialize Flask app with configuration.
+# Initialize and configure Flask app.
 app = Flask(__name__)
 app.config.from_object(Config)
 
@@ -33,16 +32,14 @@ logger = logging.getLogger(__name__)
 # Validate config
 validate_config(app)
 
+# Register routes
 register_routes(app, mail)
 
-# Import the utility
-from utils import ensure_file_exists
-
 # Define resume file path
-RESUME_PATH = os.path.join(app.static_folder, 'files', 'Resume.v2.pdf')
+RESUME_PATH = os.path.join(app.static_folder, "files", "Resume.v2.pdf")
 ensure_file_exists(RESUME_PATH)
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     with app.app_context():
         # _ all tables before the app starts
         db.create_all()
