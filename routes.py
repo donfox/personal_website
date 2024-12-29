@@ -25,6 +25,8 @@ def register_routes(app, mail):
         mail (Mail): The Flask-Mail instance.
     """
 
+    logger.info("Registering routes.")    
+
     @app.route("/")
     def index():
         return render_template('index.html')
@@ -75,6 +77,25 @@ def register_routes(app, mail):
             return redirect(url_for("resume"))
 
         return render_template("resume.html")
+
+
+    @app.route("/secret-email-view-98347")
+    def email_requests():
+        """Display email request data in a private view."""
+    
+        # Fetch email requests from the database
+        try:
+            requests = EmailRequest.query.all()
+            return render_template(
+                "email_requests.html",
+                email_requests=requests
+            )
+        except Exception as e:
+            logger.error(f"Failed to retrieve email requests: {e}")
+            flash("An error occurred while retrieving data.", "danger")
+            return redirect(url_for("index"))
+
+        
 
     @app.route("/books")
     def books():
