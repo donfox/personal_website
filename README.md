@@ -1,34 +1,4 @@
-Last login: Sat Dec 28 14:32:22 on ttys000
-You have new mail.
 
-The default interactive shell is now zsh.
-To update your account to use zsh, please run `chsh -s /bin/zsh`.
-For more details, please visit https://support.apple.com/kb/HT208050.
-(base) MacBookPro-2:instance donfox1$ pwd
-/Users/donfox1/Work/website_proj/instance
-(base) MacBookPro-2:instance donfox1$ cd ..
-(base) MacBookPro-2:website_proj donfox1$ ls
-README.md		__pycache__/		config.py		logs/			requirements.txt	static/			tests/
-__init__.py		app.py			instance/		models.py		routes.py		templates/		utils.py
-(base) MacBookPro-2:website_proj donfox1$ subl .
-(base) MacBookPro-2:website_proj donfox1$ conda deactivate
-MacBookPro-2:website_proj donfox1$ conda activate flask_env
-(flask_env) MacBookPro-2:website_proj donfox1$ ls
-README.md		__pycache__/		config.py		logs/			requirements.txt	static/			tests/
-__init__.py		app.py			instance/		models.py		routes.py		templates/		utils.py
-(flask_env) MacBookPro-2:website_proj donfox1$ ls instance/
-app.db
-(flask_env) MacBookPro-2:website_proj donfox1$ ls -l instance/
-total 24
--rw-r--r--  1 donfox1  staff  12288 Dec 28 14:40 app.db
-(flask_env) MacBookPro-2:website_proj donfox1$ chmod +x *.db
-chmod: *.db: No such file or directory
-(flask_env) MacBookPro-2:website_proj donfox1$ chmod instance/app.db 
-usage:	chmod [-fhv] [-R [-H | -L | -P]] [-a | +a | =a  [i][# [ n]]] mode|entry file ...
-	chmod [-fhv] [-R [-H | -L | -P]] [-E | -C | -N | -i | -I] file ...
-(flask_env) MacBookPro-2:website_proj donfox1$ chmod +xinstance/app.db 
-usage:	chmod [-fhv] [-R [-H | -L | -P]] [-a | +a | =a  [i][# [ n]]] mode|entry file ...
-	chmod [-fhv] [-R [-H | -L | -P]] [-E | -C | -N | -i | -I] file ...
 # Resume Request App
 
 A Flask-based web application that allows users to request a resume via email. User details are stored in a database, and the resume is sent as an email attachment.
