@@ -1,4 +1,3 @@
-
 # Resume Request App
 
 A Flask-based web application that allows users to request a resume via email. User details are stored in a database, and the resume is sent as an email attachment.
@@ -63,4 +62,21 @@ Usage
 
    resume-request-app/
 ├── app.py               # Main application logic
-"README.md" [noeol] 82L, 2466B
+├── config.py            # Application configuration
+├── models.py            # Database models
+├── requirements.txt     # Required Python dependencies
+├── static/              # Static files (CSS, images, etc.)
+│   ├── files/           # Resume and other downloadable files
+│   └── style.css        # Application styles
+├── templates/           # HTML templates
+│   ├── index.html       # Home page
+│   ├── resume.html      # Resume request form
+│   └── books.html       # Example additional page
+└── instance/            # Contains SQLite database (app.db)
+
+
+Future Enhancements
+   •  Add more robust error handling for email failures.
+   •  Implement Flask-Migrate for database migrations.
+   •  Add unit tests for key functionality.
+   •  Deploy to a cloud platform (e.g., AWS, Heroku).
