@@ -1,0 +1,390 @@
+2024-12-29 15:14:17,562 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 15:14:17] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-29 15:14:40,879 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 15:14:40] "GET /resume HTTP/1.1" 200 -
+2024-12-29 15:14:40,893 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 15:14:40] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 15:19:27,876 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 15:19:27] "GET / HTTP/1.1" 200 -
+2024-12-29 15:19:27,895 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 15:19:27] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 15:19:27,897 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 15:19:27] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-29 19:28:21,214 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 19:28:21] "GET / HTTP/1.1" 200 -
+2024-12-29 19:28:21,233 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 19:28:21] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 19:28:21,233 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 19:28:21] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-29 19:35:26,212 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 19:35:26] "GET / HTTP/1.1" 200 -
+2024-12-29 19:35:26,229 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 19:35:26] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 19:35:26,229 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 19:35:26] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-29 19:36:01,272 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 19:36:01] "GET / HTTP/1.1" 200 -
+2024-12-29 19:36:01,294 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 19:36:01] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 19:36:01,295 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 19:36:01] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-29 19:36:14,468 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 19:36:14] "GET / HTTP/1.1" 200 -
+2024-12-29 19:36:14,487 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 19:36:14] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 19:36:14,488 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 19:36:14] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-29 19:37:48,891 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 19:37:48] "GET /resume HTTP/1.1" 200 -
+2024-12-29 19:37:48,910 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 19:37:48] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 19:46:50,118 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 19:46:50] "GET / HTTP/1.1" 200 -
+2024-12-29 19:46:50,146 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 19:46:50] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 19:46:50,147 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 19:46:50] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-29 20:00:14,914 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 20:00:14] "GET / HTTP/1.1" 200 -
+2024-12-29 20:00:14,933 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 20:00:14] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 20:00:14,936 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 20:00:14] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-29 20:03:51,044 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 20:03:51] "GET / HTTP/1.1" 200 -
+2024-12-29 20:03:51,062 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 20:03:51] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 20:03:51,063 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 20:03:51] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-29 20:04:21,105 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 20:04:21] "GET / HTTP/1.1" 200 -
+2024-12-29 20:04:21,120 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 20:04:21] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 20:04:21,120 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 20:04:21] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-29 21:46:17,070 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 21:46:17] "GET / HTTP/1.1" 200 -
+2024-12-29 21:46:17,091 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 21:46:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 21:46:17,092 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 21:46:17] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-29 21:51:37,917 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 21:51:37] "GET / HTTP/1.1" 200 -
+2024-12-29 21:51:37,935 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 21:51:37] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 21:51:37,937 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 21:51:37] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-29 22:03:53,983 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:03:53] "GET / HTTP/1.1" 200 -
+2024-12-29 22:03:54,002 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:03:54] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 22:03:54,003 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:03:54] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-29 22:04:07,377 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:04:07] "GET /resume HTTP/1.1" 200 -
+2024-12-29 22:04:07,393 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:04:07] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 22:06:13,005 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:06:13] "GET / HTTP/1.1" 200 -
+2024-12-29 22:06:13,025 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:06:13] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 22:06:13,025 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:06:13] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-29 22:07:29,065 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:07:29] "GET / HTTP/1.1" 200 -
+2024-12-29 22:07:29,085 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:07:29] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 22:07:29,086 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:07:29] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-29 22:07:31,795 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:07:31] "GET /resume HTTP/1.1" 200 -
+2024-12-29 22:07:31,812 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:07:31] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 22:14:45,689 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:14:45] "GET /resume HTTP/1.1" 200 -
+2024-12-29 22:14:45,702 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:14:45] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 22:16:40,772 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:16:40] "GET /resume HTTP/1.1" 200 -
+2024-12-29 22:16:40,791 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:16:40] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 22:17:04,455 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:17:04] "GET /resume HTTP/1.1" 200 -
+2024-12-29 22:17:04,470 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:17:04] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 22:18:48,468 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:18:48] "GET /resume HTTP/1.1" 200 -
+2024-12-29 22:18:48,487 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:18:48] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 22:18:50,390 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:18:50] "GET /resume HTTP/1.1" 200 -
+2024-12-29 22:18:50,403 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:18:50] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 22:22:51,247 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:22:51] "GET /resume HTTP/1.1" 200 -
+2024-12-29 22:22:51,268 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:22:51] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 22:25:37,214 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:25:37] "GET / HTTP/1.1" 200 -
+2024-12-29 22:25:37,231 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:25:37] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 22:25:37,234 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:25:37] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-29 22:30:40,767 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:30:40] "GET / HTTP/1.1" 200 -
+2024-12-29 22:30:40,786 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:30:40] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 22:30:40,788 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:30:40] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-29 22:33:03,218 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:33:03] "GET / HTTP/1.1" 200 -
+2024-12-29 22:33:03,233 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:33:03] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 22:33:03,236 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:33:03] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-29 22:39:34,040 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:39:34] "GET / HTTP/1.1" 200 -
+2024-12-29 22:39:34,056 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:39:34] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 22:39:34,057 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:39:34] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-29 22:44:43,457 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:44:43] "GET / HTTP/1.1" 200 -
+2024-12-29 22:44:43,474 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:44:43] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 22:44:43,474 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:44:43] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-29 22:48:04,598 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:48:04] "GET / HTTP/1.1" 200 -
+2024-12-29 22:48:04,616 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:48:04] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 22:48:04,618 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:48:04] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-29 22:48:55,241 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:48:55] "GET / HTTP/1.1" 200 -
+2024-12-29 22:48:55,259 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:48:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 22:48:55,261 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:48:55] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-29 22:55:46,243 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:55:46] "GET / HTTP/1.1" 200 -
+2024-12-29 22:55:46,259 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:55:46] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 22:55:46,262 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:55:46] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-29 22:58:46,779 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:58:46] "GET / HTTP/1.1" 200 -
+2024-12-29 22:58:46,792 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:58:46] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 22:58:46,795 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 22:58:46] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-29 23:02:06,336 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 23:02:06] "GET / HTTP/1.1" 200 -
+2024-12-29 23:02:06,355 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 23:02:06] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 23:02:06,356 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 23:02:06] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-29 23:04:33,197 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 23:04:33] "GET / HTTP/1.1" 200 -
+2024-12-29 23:04:33,212 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 23:04:33] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-29 23:04:33,214 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 23:04:33] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-29 23:08:33,704 - werkzeug - INFO - 127.0.0.1 - - [29/Dec/2024 23:08:33] "GET /static/images/Recomendation_Dave_Schultz.jpg HTTP/1.1" 200 -
+2024-12-30 15:52:45,948 - config - INFO - Logging is successfully configured.
+2024-12-30 15:52:45,948 - routes - INFO - Registering routes.
+2024-12-30 15:52:45,952 - __main__ - INFO - Starting Flask application.
+2024-12-30 15:52:46,006 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-30 15:52:46,006 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-30 15:52:46,007 - werkzeug - INFO -  * Restarting with stat
+2024-12-30 15:52:46,209 - config - INFO - Logging is successfully configured.
+2024-12-30 15:52:46,209 - routes - INFO - Registering routes.
+2024-12-30 15:52:46,210 - __main__ - INFO - Starting Flask application.
+2024-12-30 15:52:46,228 - werkzeug - WARNING -  * Debugger is active!
+2024-12-30 15:52:46,236 - werkzeug - INFO -  * Debugger PIN: 585-954-686
+2024-12-30 15:53:19,088 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 15:53:19] "GET / HTTP/1.1" 200 -
+2024-12-30 15:53:19,101 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 15:53:19] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-30 15:53:19,102 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 15:53:19] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 15:53:20,817 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 15:53:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-12-30 16:13:28,458 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 16:13:28] "GET / HTTP/1.1" 200 -
+2024-12-30 16:13:28,471 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 16:13:28] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 16:13:28,476 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 16:13:28] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-30 16:14:37,956 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 16:14:37] "GET / HTTP/1.1" 200 -
+2024-12-30 16:14:37,974 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 16:14:37] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 16:14:37,974 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 16:14:37] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-30 16:19:18,612 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 16:19:18] "GET / HTTP/1.1" 200 -
+2024-12-30 16:19:18,638 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 16:19:18] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 16:19:18,638 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 16:19:18] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-30 17:27:58,866 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 17:27:58] "GET / HTTP/1.1" 200 -
+2024-12-30 17:27:58,883 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 17:27:58] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 17:27:58,884 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 17:27:58] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-30 17:39:25,447 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 17:39:25] "GET /resume HTTP/1.1" 200 -
+2024-12-30 17:39:25,467 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 17:39:25] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 17:40:29,727 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 17:40:29] "GET / HTTP/1.1" 200 -
+2024-12-30 17:40:29,745 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 17:40:29] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 17:40:29,745 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 17:40:29] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-30 17:40:50,291 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 17:40:50] "GET /resume HTTP/1.1" 200 -
+2024-12-30 17:40:50,307 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 17:40:50] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 17:48:39,423 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 17:48:39] "GET /resume HTTP/1.1" 200 -
+2024-12-30 17:48:39,439 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 17:48:39] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 17:49:13,130 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 17:49:13] "GET /books HTTP/1.1" 200 -
+2024-12-30 17:49:13,152 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 17:49:13] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 18:11:10,328 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 18:11:10] "GET / HTTP/1.1" 200 -
+2024-12-30 18:11:10,331 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 18:11:10] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 18:11:10,334 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 18:11:10] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-30 18:11:16,376 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 18:11:16] "GET /books HTTP/1.1" 200 -
+2024-12-30 18:11:16,390 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 18:11:16] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 18:11:19,017 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 18:11:19] "GET / HTTP/1.1" 200 -
+2024-12-30 18:11:19,021 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 18:11:19] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 18:11:19,029 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 18:11:19] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-30 18:11:19,031 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 18:11:19] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 18:11:19,034 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 18:11:19] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-30 18:12:04,389 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 18:12:04] "GET / HTTP/1.1" 200 -
+2024-12-30 18:12:04,405 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 18:12:04] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 18:12:04,410 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 18:12:04] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-30 18:12:14,877 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 18:12:14] "GET /books HTTP/1.1" 200 -
+2024-12-30 18:12:14,892 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 18:12:14] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 18:44:22,865 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 18:44:22] "GET /books HTTP/1.1" 200 -
+2024-12-30 18:44:22,879 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 18:44:22] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 21:34:58,835 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 21:34:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-12-30 21:52:05,749 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 21:52:05] "GET /books HTTP/1.1" 200 -
+2024-12-30 21:52:05,765 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 21:52:05] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 21:54:37,977 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 21:54:37] "GET /books HTTP/1.1" 200 -
+2024-12-30 21:54:37,991 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 21:54:37] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 21:57:53,238 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 21:57:53] "GET /books HTTP/1.1" 200 -
+2024-12-30 21:57:53,253 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 21:57:53] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 21:58:17,269 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 21:58:17] "GET /books HTTP/1.1" 200 -
+2024-12-30 21:58:17,284 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 21:58:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 22:00:56,656 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 22:00:56] "GET /books HTTP/1.1" 200 -
+2024-12-30 22:00:56,673 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 22:00:56] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 22:00:58,427 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 22:00:58] "GET /books HTTP/1.1" 200 -
+2024-12-30 22:00:58,444 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 22:00:58] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 22:03:18,502 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 22:03:18] "GET /books HTTP/1.1" 200 -
+2024-12-30 22:03:18,519 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 22:03:18] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 22:37:19,572 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 22:37:19] "GET /books HTTP/1.1" 200 -
+2024-12-30 22:37:19,591 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 22:37:19] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 22:46:33,700 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 22:46:33] "GET /books HTTP/1.1" 200 -
+2024-12-30 22:46:33,714 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 22:46:33] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 22:47:20,954 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 22:47:20] "GET /books HTTP/1.1" 200 -
+2024-12-30 22:47:20,971 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 22:47:20] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 22:47:27,068 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 22:47:27] "GET /books HTTP/1.1" 200 -
+2024-12-30 22:47:27,082 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 22:47:27] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 22:49:29,407 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 22:49:29] "GET /books HTTP/1.1" 200 -
+2024-12-30 22:49:29,425 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 22:49:29] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 23:02:36,571 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 23:02:36] "GET /books HTTP/1.1" 200 -
+2024-12-30 23:02:36,588 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 23:02:36] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 23:03:47,656 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 23:03:47] "GET /books HTTP/1.1" 200 -
+2024-12-30 23:03:47,672 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 23:03:47] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 23:04:14,911 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 23:04:14] "GET /books HTTP/1.1" 200 -
+2024-12-30 23:04:14,931 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 23:04:14] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 23:05:14,569 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 23:05:14] "GET /books HTTP/1.1" 200 -
+2024-12-30 23:05:14,580 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 23:05:14] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 23:08:59,425 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 23:08:59] "GET /books HTTP/1.1" 200 -
+2024-12-30 23:08:59,440 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 23:08:59] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 23:11:20,159 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 23:11:20] "GET / HTTP/1.1" 200 -
+2024-12-30 23:11:20,178 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 23:11:20] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-30 23:11:20,178 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 23:11:20] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-30 23:11:32,633 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 23:11:32] "GET /resume HTTP/1.1" 200 -
+2024-12-30 23:11:32,651 - werkzeug - INFO - 127.0.0.1 - - [30/Dec/2024 23:11:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 13:05:06,263 - config - INFO - Logging is successfully configured.
+2024-12-31 13:05:06,263 - routes - INFO - Registering routes.
+2024-12-31 13:05:06,267 - __main__ - INFO - Starting Flask application.
+2024-12-31 13:05:06,330 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-12-31 13:05:06,330 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2024-12-31 13:05:06,331 - werkzeug - INFO -  * Restarting with stat
+2024-12-31 13:05:06,515 - config - INFO - Logging is successfully configured.
+2024-12-31 13:05:06,515 - routes - INFO - Registering routes.
+2024-12-31 13:05:06,516 - __main__ - INFO - Starting Flask application.
+2024-12-31 13:05:06,533 - werkzeug - WARNING -  * Debugger is active!
+2024-12-31 13:05:06,542 - werkzeug - INFO -  * Debugger PIN: 122-227-678
+2024-12-31 13:05:22,476 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 13:05:22] "GET / HTTP/1.1" 200 -
+2024-12-31 13:05:22,482 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 13:05:22] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 13:05:22,491 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 13:05:22] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-31 13:05:25,610 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 13:05:25] "GET /resume HTTP/1.1" 200 -
+2024-12-31 13:05:25,641 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 13:05:25] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 13:06:43,763 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 13:06:43] "GET /books HTTP/1.1" 200 -
+2024-12-31 13:06:43,775 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 13:06:43] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 13:09:35,934 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 13:09:35] "GET /books HTTP/1.1" 200 -
+2024-12-31 13:09:35,945 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 13:09:35] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 13:13:36,928 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 13:13:36] "GET /books HTTP/1.1" 200 -
+2024-12-31 13:13:36,934 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 13:13:36] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 13:15:59,250 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 13:15:59] "GET /books HTTP/1.1" 200 -
+2024-12-31 13:15:59,262 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 13:15:59] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 13:19:38,432 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 13:19:38] "GET /books HTTP/1.1" 200 -
+2024-12-31 13:19:38,442 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 13:19:38] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 13:20:03,648 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 13:20:03] "GET /books HTTP/1.1" 200 -
+2024-12-31 13:20:03,659 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 13:20:03] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 13:20:53,132 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 13:20:53] "GET /books HTTP/1.1" 200 -
+2024-12-31 13:20:53,145 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 13:20:53] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 13:21:44,024 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 13:21:44] "GET /books HTTP/1.1" 200 -
+2024-12-31 13:21:44,039 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 13:21:44] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 13:23:28,215 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 13:23:28] "GET /books HTTP/1.1" 200 -
+2024-12-31 13:23:28,226 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 13:23:28] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 13:23:29,016 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 13:23:29] "GET /books HTTP/1.1" 200 -
+2024-12-31 13:23:29,033 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 13:23:29] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 13:26:26,475 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 13:26:26] "GET /books HTTP/1.1" 200 -
+2024-12-31 13:26:26,493 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 13:26:26] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 13:27:17,226 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 13:27:17] "GET /books HTTP/1.1" 200 -
+2024-12-31 13:27:17,236 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 13:27:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 13:33:53,766 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 13:33:53] "GET /books HTTP/1.1" 200 -
+2024-12-31 13:33:53,783 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 13:33:53] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 13:35:59,677 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 13:35:59] "GET /books HTTP/1.1" 200 -
+2024-12-31 13:35:59,693 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 13:35:59] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 14:55:02,267 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 14:55:02] "GET /books HTTP/1.1" 200 -
+2024-12-31 14:55:02,281 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 14:55:02] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 14:55:12,772 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 14:55:12] "GET /books HTTP/1.1" 200 -
+2024-12-31 14:55:12,788 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 14:55:12] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 14:55:23,569 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 14:55:23] "GET /books HTTP/1.1" 200 -
+2024-12-31 14:55:23,575 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 14:55:23] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 14:55:25,737 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 14:55:25] "GET /books HTTP/1.1" 200 -
+2024-12-31 14:55:25,747 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 14:55:25] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 14:56:20,638 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 14:56:20] "GET /books HTTP/1.1" 200 -
+2024-12-31 14:56:20,650 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 14:56:20] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 14:56:32,866 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 14:56:32] "GET /books HTTP/1.1" 200 -
+2024-12-31 14:56:32,876 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 14:56:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 14:57:20,264 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 14:57:20] "GET /books HTTP/1.1" 200 -
+2024-12-31 14:57:20,274 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 14:57:20] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 15:00:47,471 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:00:47] "GET /books HTTP/1.1" 200 -
+2024-12-31 15:00:47,480 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:00:47] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 15:02:45,408 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:02:45] "GET /books HTTP/1.1" 200 -
+2024-12-31 15:02:45,422 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:02:45] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 15:02:47,628 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:02:47] "GET /books HTTP/1.1" 200 -
+2024-12-31 15:02:47,642 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:02:47] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 15:03:36,731 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:03:36] "GET /books HTTP/1.1" 200 -
+2024-12-31 15:03:36,740 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:03:36] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 15:04:14,437 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:04:14] "GET /books HTTP/1.1" 200 -
+2024-12-31 15:04:14,447 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:04:14] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 15:05:08,305 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:05:08] "GET /books HTTP/1.1" 200 -
+2024-12-31 15:05:08,320 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:05:08] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 15:05:31,800 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:05:31] "GET /books HTTP/1.1" 200 -
+2024-12-31 15:05:31,809 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:05:31] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 15:06:35,034 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:06:35] "GET /books HTTP/1.1" 200 -
+2024-12-31 15:06:35,060 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:06:35] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 15:06:37,022 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:06:37] "GET /books HTTP/1.1" 200 -
+2024-12-31 15:06:37,036 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:06:37] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 15:07:22,444 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:07:22] "GET /books HTTP/1.1" 200 -
+2024-12-31 15:07:22,456 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:07:22] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 15:08:13,953 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:08:13] "GET /books HTTP/1.1" 200 -
+2024-12-31 15:08:13,965 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:08:13] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 15:08:16,233 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:08:16] "GET /books HTTP/1.1" 200 -
+2024-12-31 15:08:16,248 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:08:16] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 15:08:18,485 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:08:18] "GET /books HTTP/1.1" 200 -
+2024-12-31 15:08:18,497 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:08:18] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 15:08:57,382 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:08:57] "GET /books HTTP/1.1" 200 -
+2024-12-31 15:08:57,394 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:08:57] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 15:10:13,069 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:10:13] "GET /books HTTP/1.1" 200 -
+2024-12-31 15:10:13,083 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:10:13] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 15:11:36,410 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:11:36] "GET /books HTTP/1.1" 200 -
+2024-12-31 15:11:36,422 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:11:36] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 15:14:38,944 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:14:38] "GET /books HTTP/1.1" 200 -
+2024-12-31 15:14:38,956 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:14:38] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 15:19:30,775 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:19:30] "GET /books HTTP/1.1" 200 -
+2024-12-31 15:19:30,785 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:19:30] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 15:25:44,499 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:25:44] "GET /books HTTP/1.1" 200 -
+2024-12-31 15:25:44,509 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:25:44] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 15:29:45,262 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:29:45] "GET /books HTTP/1.1" 200 -
+2024-12-31 15:29:45,273 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:29:45] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 15:33:12,929 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:33:12] "GET /books HTTP/1.1" 200 -
+2024-12-31 15:33:12,942 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:33:12] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 15:34:11,659 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:34:11] "GET /books HTTP/1.1" 200 -
+2024-12-31 15:34:11,668 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:34:11] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 15:35:29,743 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:35:29] "GET /books HTTP/1.1" 200 -
+2024-12-31 15:35:29,758 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:35:29] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 15:35:44,475 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:35:44] "GET /books HTTP/1.1" 200 -
+2024-12-31 15:35:44,485 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:35:44] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 15:36:50,350 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:36:50] "GET /books HTTP/1.1" 200 -
+2024-12-31 15:36:50,361 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:36:50] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 15:37:33,809 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:37:33] "GET /books HTTP/1.1" 200 -
+2024-12-31 15:37:33,821 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:37:33] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 15:38:15,548 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:38:15] "GET /books HTTP/1.1" 200 -
+2024-12-31 15:38:15,558 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:38:15] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 15:38:43,430 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:38:43] "GET /books HTTP/1.1" 200 -
+2024-12-31 15:38:43,444 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:38:43] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 15:40:07,382 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:40:07] "GET /books HTTP/1.1" 200 -
+2024-12-31 15:40:07,390 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:40:07] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 15:40:39,939 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:40:39] "GET /books HTTP/1.1" 200 -
+2024-12-31 15:40:39,952 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 15:40:39] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 18:12:42,998 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 18:12:42] "GET /books HTTP/1.1" 200 -
+2024-12-31 18:12:43,011 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 18:12:43] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 20:47:21,678 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 20:47:21] "GET /books HTTP/1.1" 200 -
+2024-12-31 20:47:21,696 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 20:47:21] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 21:04:43,194 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 21:04:43] "GET /resume HTTP/1.1" 200 -
+2024-12-31 21:04:43,208 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 21:04:43] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 21:04:57,321 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 21:04:57] "GET /resume HTTP/1.1" 200 -
+2024-12-31 21:04:57,335 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 21:04:57] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 21:04:59,108 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 21:04:59] "GET /resume HTTP/1.1" 200 -
+2024-12-31 21:04:59,113 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 21:04:59] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 21:05:00,347 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 21:05:00] "GET /resume HTTP/1.1" 200 -
+2024-12-31 21:05:00,361 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 21:05:00] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 21:05:24,809 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 21:05:24] "GET / HTTP/1.1" 200 -
+2024-12-31 21:05:24,815 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 21:05:24] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 21:05:24,816 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 21:05:24] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-31 21:05:24,823 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 21:05:24] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 21:05:24,829 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 21:05:24] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-31 21:06:40,432 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 21:06:40] "GET /books HTTP/1.1" 200 -
+2024-12-31 21:06:40,437 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 21:06:40] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 21:06:40,442 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 21:06:40] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 21:27:18,767 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 21:27:18] "GET / HTTP/1.1" 200 -
+2024-12-31 21:27:18,771 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 21:27:18] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-31 21:27:18,771 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 21:27:18] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 21:27:18,784 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 21:27:18] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 21:27:18,786 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 21:27:18] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2024-12-31 21:27:20,598 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 21:27:20] "GET /resume HTTP/1.1" 200 -
+2024-12-31 21:27:20,610 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 21:27:20] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 21:27:25,729 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 21:27:25] "GET /books HTTP/1.1" 200 -
+2024-12-31 21:27:25,731 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 21:27:25] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 21:27:25,735 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 21:27:25] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 21:31:58,426 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 21:31:58] "GET /resume HTTP/1.1" 200 -
+2024-12-31 21:31:58,438 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 21:31:58] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-12-31 21:37:29,701 - routes - INFO - Received request from Don Fox (donfox1@mac.com) at 127.0.0.1
+2024-12-31 21:37:29,702 - routes - INFO - Inserting request into database: Don Fox, donfox1@mac.com, 127.0.0.1
+2024-12-31 21:37:29,723 - utils - INFO - Attempting to send email to donfox1@mac.com
+2024-12-31 21:37:29,753 - utils - INFO - Attaching file: /Users/donfox1/Work/website_proj/static/files/Resume.v2.pdf
+2024-12-31 21:37:29,755 - utils - INFO - Sending email to donfox1@mac.com via SMTP...
+2024-12-31 21:37:33,959 - utils - INFO - Email successfully sent to donfox1@mac.com
+2024-12-31 21:37:33,963 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 21:37:33] "[32mPOST /resume HTTP/1.1[0m" 302 -
+2024-12-31 21:37:33,982 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 21:37:33] "GET /resume HTTP/1.1" 200 -
+2024-12-31 21:37:33,997 - werkzeug - INFO - 127.0.0.1 - - [31/Dec/2024 21:37:33] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-01-01 15:37:08,785 - config - INFO - Logging is successfully configured.
+2025-01-01 15:37:08,785 - routes - INFO - Registering routes.
+2025-01-01 15:37:08,787 - __main__ - INFO - Starting Flask application.
+2025-01-01 18:53:09,247 - config - INFO - Logging is successfully configured.
+2025-01-01 18:53:09,247 - routes - INFO - Registering routes.
+2025-01-01 18:53:09,251 - __main__ - INFO - Starting Flask application.
+2025-01-01 18:53:09,329 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-01 18:53:09,329 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-01 18:53:09,329 - werkzeug - INFO -  * Restarting with stat
+2025-01-01 18:53:09,518 - config - INFO - Logging is successfully configured.
+2025-01-01 18:53:09,518 - routes - INFO - Registering routes.
+2025-01-01 18:53:09,519 - __main__ - INFO - Starting Flask application.
+2025-01-01 18:53:09,535 - werkzeug - WARNING -  * Debugger is active!
+2025-01-01 18:53:09,545 - werkzeug - INFO -  * Debugger PIN: 122-227-678
+2025-01-01 19:01:21,708 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 19:01:21] "GET / HTTP/1.1" 200 -
+2025-01-01 19:01:21,731 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 19:01:21] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-01-01 19:01:21,731 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 19:01:21] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2025-01-01 19:01:23,356 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 19:01:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-01 19:01:34,110 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 19:01:34] "GET /resume HTTP/1.1" 200 -
+2025-01-01 19:01:34,126 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 19:01:34] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-01-01 19:01:54,333 - routes - INFO - Received request from Donald Ray fox (donfox1@mac.com) at 127.0.0.1
+2025-01-01 19:01:54,336 - routes - INFO - Inserting request into database: Donald Ray fox, donfox1@mac.com, 127.0.0.1
+2025-01-01 19:01:54,354 - utils - INFO - Attempting to send email to donfox1@mac.com
+2025-01-01 19:01:54,364 - utils - INFO - Attaching file: /Users/donfox1/Work/website_proj/static/files/Resume.v2.pdf
+2025-01-01 19:01:54,364 - utils - INFO - Sending email to donfox1@mac.com via SMTP...
+2025-01-01 19:01:57,456 - utils - INFO - Email successfully sent to donfox1@mac.com
+2025-01-01 19:01:57,460 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 19:01:57] "[32mPOST /resume HTTP/1.1[0m" 302 -
+2025-01-01 19:01:57,472 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 19:01:57] "GET /resume HTTP/1.1" 200 -
+2025-01-01 19:01:57,488 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 19:01:57] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-01-01 19:43:28,710 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 19:43:28] "GET / HTTP/1.1" 200 -
+2025-01-01 19:43:28,733 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 19:43:28] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-01-01 19:43:28,737 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 19:43:28] "[36mGET /static/images/don.jpg HTTP/1.1[0m" 304 -
+2025-01-01 19:43:45,090 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 19:43:45] "GET /resume HTTP/1.1" 200 -
+2025-01-01 19:43:45,108 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 19:43:45] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-01-01 19:44:00,657 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 19:44:00] "GET /books HTTP/1.1" 200 -
+2025-01-01 19:44:00,670 - werkzeug - INFO - 127.0.0.1 - - [01/Jan/2025 19:44:00] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
