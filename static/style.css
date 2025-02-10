@@ -15,6 +15,23 @@ body {
 /* Main Container - Centers Content */
 .container {
   width: 100%;
+  max-w/* General Body Styling */
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Organize content vertically */
+  min-height: 100vh; /* Ensure full viewport height */
+}
+
+/* Main Container - Centers Content */
+.container {
+  width: 100%;
   max-width: 950px;
   padding: 20px;
   margin: auto;
@@ -36,11 +53,89 @@ header address {
   line-height: 1.4;
 }
 
+/* Center Contact Info */
+.contact {
+  text-align: center !important;
+}
+.contact p {
+  text-align: center !important;
+  margin: 5px 0;
+}
+
 /* Underlined Headers */
 h4 {
   text-align: left;
-  text-decoration: underline;
+  text-decoration: node;
   margin-top: 20px;
+}
+
+/* Text and List Styling */
+p, ul, li {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+/* Image Styling */
+img {
+  display: block;
+  margin: 0 auto;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+/* Flash Messages */
+.flash-messages ul {
+  list-style-type: none; /* Removes bullet points */
+  margin: 0;
+  padding: 0;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  margin: 20px auto;
+  padding: 10px 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: #007bff;
+  margin: 5px 0; /* Adjust vertical spacing */
+  display: block; /* Stack links vertically */
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+/* Media Queries for Small Devices */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+    width: 90%;
+  }
+}
+idth: 950px;
+  padding: 20px;
+  margin: auto;
+  flex: 1; /* Push footer to bottom */
+}
+
+/* Header Content */
+header {
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+header address {
+  margin-top: 0;
+  font-style: normal;
+  line-height: 1.4;
 }
 
 /* Text and List Styling */

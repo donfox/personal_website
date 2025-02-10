@@ -27,46 +27,40 @@ def send_email(mail, app, recipient, subject, body, attachment_path):
     """
     Send email with a resume attachment.
 
-    Args:
-        mail (Mail): The Flask-Mail object.
-        app (Flask): The Flask app instance.
-        recipient (str): The email recipient.
-        subject (str): The email subject.
-        body (str): The email body.
-        attachment_path (str): Path to the attachment.
-
     Returns:
-        tuple: (bool, str) where the first value indicates success and the second value provides error details.
+        tuple: (bool, str) where the first value indicates success and the second provides an error message.
     """
+
     try:
         logger.info(f"Attempting to send email to {recipient}")
         msg = Message(subject, sender=app.config['MAIL_USERNAME'], recipients=[recipient])
         msg.body = body
 
-        # Check if attachment exists
+        # Ensure an attachment check ALWAYS returns a message
         if attachment_path and os.path.exists(attachment_path):
             logger.info(f"Attaching file: {attachment_path}")
             with app.open_resource(attachment_path) as fp:
                 msg.attach(os.path.basename(attachment_path), "application/pdf", fp.read())
         else:
             logger.warning(f"Attachment file not found: {attachment_path}")
+            return False, "Resume file is missing."
 
-        # Send the email
-        logger.info(f"Sending email to {recipient} via SMTP...")
-        mail.send(msg)
-        logger.info(f"Email successfully sent to {recipient}")
-        return True, "Email sent successfully."
-
-    except smtplib.SMTPAuthenticationError as e:
-        logger.error(f"SMTP Authentication error: {e}")
-        return False, "Authentication failed. Please try again later."
-    except smtplib.SMTPRecipientsRefused as e:
-        logger.error(f"SMTP Recipients refused: {e}")
-        return False, "Recipient address was rejected. Please check the email address."
-    except smtplib.SMTPException as e:
-        logger.error(f"General SMTP error: {e}")
-        return False, "Failed to send the email. Please try again later."
+        # Send the email and catch failures
+        try:
+            mail.send(msg)
+            logger.info(f"Email successfully sent to {recipient}")
+            return True, "Email sent successfully."
+        except smtplib.SMTPAuthenticationError as e:
+             logger.error(f"SMTP Authentication failed: {e}")
+             return False, "SMTP authentication failed. Please check email credentials" 
+        except smtplib.SMTPRecipientsRefused as e:
+            logger.error(f"SMTP Recipients refused: {e}")
+            return False, "Recipient address was rejected. Please check the email address."
+        except smtplib.SMTPException as e:
+            logger.error(f"General SMTP error: {e}")
+            return False, "Failed to send the email. Please try again later."
+            
     except Exception as e:
         logger.error(f"Unexpected error: {e}")
-        return False, "An unexpected error occurred. Please try again later."
+        return False, "Authentication failed. Please check email credentials."
 

@@ -5,11 +5,11 @@ Defines the routes for handling requests, including the resume and book pages.
 Author: Don Fox
 Date: 12/10/2024
 """
-
 import os
 import re
 import logging
 from flask import render_template, redirect, url_for, request, flash
+from sqlalchemy import text
 from models import db, EmailRequest
 from utils import send_email
 
@@ -53,20 +53,41 @@ def register_routes(app, mail):
 
             # Record request in the database
             try:
+                db.session.execute(text("SELECT 1"))  # Test database connection
+
+                # ✅ **Check if email already exists before inserting**
+                existing_request = EmailRequest.query.filter_by(email=user_email).first()
+                if existing_request:
+                    flash("You have already requested a resume. Please check your email.", "warning")
+                    return redirect(url_for("resume"))
+
                 logger.info(f"Inserting request into database: {user_name}, {user_email}, {ip_address}")
                 new_request = EmailRequest(name=user_name, email=user_email, ip_address=ip_address)
                 db.session.add(new_request)
                 db.session.commit()
             except Exception as e:
-                db.session.rollback()
-                logger.error(f"Failed to insert request into database: {e}")
-                flash("An error occurred while recording your request. Please try again later.", "danger")
+                db.session.rollback()    # Prevent Transaction Issues
+
+                # Log the specific error type
+                if "database is locked" in str(e).lower():
+                    logger.error(f"Database locked error: {e}")
+                    flash("Database is currently busy. Please try again in a few moments.", "danger")
+                elif "no such table" in str(e).lower():
+                    logger.error(f"Database schema issue: {e}")
+                    flash("Database table missing. Please contact support.", "danger")
+                else:
+                    logger.error(f"Error recording request: {e}")
+                    flash("An unexpected error occurred while processing your request.", "danger")
+
                 return redirect(url_for("resume"))
 
             # Send email
             subject = "Your Requested Resume"
             body = f"Hello {user_name},\n\nThank you for your interest. Attached is the resume you requested."
-            attachment_path = os.path.join(app.static_folder, "files", "Resume.v2.pdf")
+            attachment_path = os.path.join(app.static_folder, "files", "Resume.v3.4.pdf")
+
+            logger.info(f"Using MAIL_USERNAME={app.config['MAIL_USERNAME']}")
+            logger.info(f"Using MAIL_PASSWORD={app.config['MAIL_PASSWORD']}")  # Mask password
 
             success, message = send_email(mail, app, user_email, subject, body, attachment_path)
             if success:
@@ -95,7 +116,6 @@ def register_routes(app, mail):
             flash("An error occurred while retrieving data.", "danger")
             return redirect(url_for("index"))
 
-        
 
     @app.route("/books")
     def books():
