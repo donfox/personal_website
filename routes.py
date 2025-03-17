@@ -120,3 +120,10 @@ def register_routes(app, mail):
     @app.route("/books")
     def books():
         return render_template("books.html")
+
+    @app.route('/references')
+    def references():
+        return render_template('references.html')
+
+
+

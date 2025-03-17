@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}References and Recommendations{% endblock %}
+
+{% block content %}
+<div class="container text-center mt-4">
+    <h2>References and Recommendations</h2>
+    <img src="{{ url_for('static', filename='images/Recomendation_Dave_Schultz.jpg') }}" 
+         alt="References and Recommendations" 
+         class="img-fluid mt-3" style="max-width: 90%; height: auto;">
+    
+    <!-- Navigation Links to Other Pages -->
+    <div class="mt-4">
+        <a href="{{ url_for('index') }}" class="btn btn-primary">Home</a>
+        <a href="{{ url_for('resume') }}" class="btn btn-secondary">Resume</a>
+        <a href="{{ url_for('books') }}" class="btn btn-success">Books</a>
+    </div>
+</div>
+{% endblock %}

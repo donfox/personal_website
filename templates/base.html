@@ -16,13 +16,23 @@
   </div>
 
   <!-- Footer with Navigation Links -->
-<footer class="text-center mt-4">
-  <a href="{{ url_for('index') }}" class="footer-link">Home</a>
-  <a href="{{ url_for('resume') }}" class="footer-link">Resume</a>
-  <a href="{{ url_for('books') }}" class="footer-link">Books</a>
-  <a href="static/images/Recomendation_Dave_Schultz.jpg" class="footer-link">
-    References and Recommendations
-  </a>
+  <footer class="text-center mt-4">
+  {% if request.endpoint != 'index' %}
+    <a href="{{ url_for('index') }}" class="footer-link">Home</a>
+  {% endif %}
+  
+  {% if request.endpoint != 'resume' %}
+    <a href="{{ url_for('resume') }}" class="footer-link">Resume</a>
+  {% endif %}
+  
+  {% if request.endpoint != 'books' %}
+    <a href="{{ url_for('books') }}" class="footer-link">Books</a>
+  {% endif %}
+  
+  {% if request.endpoint != 'references' %}
+    <a href="{{ url_for('references') }}" class="footer-link">References and Recommendations</a>
+  {% endif %}
+
   <p class="mt-3">&copy; 2024 Don Fox</p>
 </footer>
 
