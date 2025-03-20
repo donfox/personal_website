@@ -6,12 +6,13 @@
 {% block content %}
 
 <main>
-  <div class="container">
-    <header><br>
-      <div style="text-align: center;">
-        <img src="static/images/don.jpg" alt="Don Fox's personal photo" height="255" width="255">
-        <h3 class="name-header">Don Fox</h3>
-      </div><br>
+  <header><br>
+    <div class="photo-container">
+        <img src="{{ url_for('static', filename='images/don.jpg') }}" 
+             alt="Your Photo" 
+             class="home-photo">
+    </div>
+</header>
     </header>
 
     <section class="intro content">

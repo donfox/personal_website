@@ -1,10 +1,10 @@
 /* General Body Styling */
 body {
-  font-family: var(--font-primary);
-  font-size: var(--font-size-base);
-  background: var(--color-bg);
-  color: var(--color-text);
-  line-height: 1.5;
+  font-family: var(--font-primary, 'Merriweather', serif); /* Slightly stronger font */
+  font-size: 18px; /* Larger for better readability */
+  background: var(--color-bg, #ffffff); /* Brighter background for contrast */
+  color: #222; /* Slightly darker for better readability */
+  line-height: 1.6; /* More spacing for easier reading */
   margin: 0;
   padding: 20px;
   display: flex;
@@ -14,24 +14,6 @@ body {
 
 /* Main Container - Centers Content */
 .container {
-  width: 100%;
-  max-w/* General Body Styling */
-body {
-  font-family: var(--font-primary);
-  font-size: var(--font-size-base);
-  background: var(--color-bg);
-  color: var(--color-text);
-  line-height: 1.5;
-  margin: 0;
-  padding: 20px;
-  display: flex;
-  flex-direction: column; /* Organize content vertically */
-  min-height: 100vh; /* Ensure full viewport height */
-}
-
-/* Main Container - Centers Content */
-.container {
-  width: 100%;
   max-width: 950px;
   padding: 20px;
   margin: auto;
@@ -57,17 +39,19 @@ header address {
 .contact {
   text-align: center !important;
 }
+
 .contact p {
   text-align: center !important;
   margin: 5px 0;
 }
 
-/* Underlined Headers */
-h4 {
-  text-align: left;
-  text-decoration: node;
-  margin-top: 20px;
+
+header h1, header h2, header h4 {
+  text-align: center;
+  width: 100%; /* Ensures full width for perfect centering */
+  margin: 10px auto; /* Adds consistent spacing */
 }
+
 
 /* Text and List Styling */
 p, ul, li {
@@ -76,12 +60,35 @@ p, ul, li {
 }
 
 /* Image Styling */
+/* Default Image Styling (For all images EXCEPT Home Page) */
 img {
   display: block;
-  margin: 0 auto;
-  border: 2px solid var(--border-color);
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
+  margin: 20px auto;
+  border-radius: 8px; /* Regular rounded corners for normal images */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ddd;
+  max-width: 90%;
+  height: auto;
+}
+
+/* Specific Styling for Home Page Photo */
+.home-photo {
+  display: block;
+  margin: 20px auto;
+  border-radius: 50%; /* Oval shape */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border: 4px solid #ddd;
+  width: 250px; /* Keep the width smaller */
+  height: 320px; /* Increase height for an oval */
+  object-fit: cover;
+  overflow: hidden;
+  clip-path: ellipse(50% 45% at 50% 50%); /* Ensures proper oval shape */
+}
+s
+img:hover {
+  border-color: #007bff; /* Changes border to blue on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+  transition: all 0.3s ease-in-out;
 }
 
 /* Flash Messages */
@@ -98,80 +105,27 @@ footer {
   padding: 10px 0;
 }
 
+footer p {
+  text-align: center;
+  margin-top: 10px;
+  display: block; /* Ensures it's treated the same as the links */
+  padding-top: 5px; /* Adds slight spacing for balance */
+}
+
 footer a {
   text-decoration: none;
   color: #007bff;
-  margin: 5px 0; /* Adjust vertical spacing */
-  display: block; /* Stack links vertically */
-}
-
-footer a:hover {
-  text-decoration: underline;
-  color: #0056b3;
-}
-
-/* Media Queries for Small Devices */
-@media (max-width: 768px) {
-  .container {
-    padding: 10px;
-    width: 90%;
-  }
-}
-idth: 950px;
-  padding: 20px;
-  margin: auto;
-  flex: 1; /* Push footer to bottom */
-}
-
-/* Header Content */
-header {
-  text-align: center;
-}
-
-header h1 {
-  margin-bottom: 10px;
-}
-
-header address {
-  margin-top: 0;
-  font-style: normal;
-  line-height: 1.4;
-}
-
-/* Text and List Styling */
-p, ul, li {
-  text-align: left;
-  margin-bottom: 1rem;
-}
-
-/* Image Styling */
-img {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Lora', serif; /* Ensures footer links use Lora */
+  margin: 8px 0;
   display: block;
-  margin: 0 auto;
-  border: 2px solid var(--border-color);
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
+  transition: color 0.3s ease-in-out;
 }
 
-/* Flash Messages */
-.flash-messages ul {
-  list-style-type: none; /* Removes bullet points */
-  margin: 0;
-  padding: 0;
-}
-
-/* Footer Styling */
-footer {
-  text-align: center;
-  margin: 20px auto;
-  padding: 10px 0;
-}
-
-footer a {
-  text-decoration: none;
-  color: #007bff;
-  margin: 5px 0; /* Adjust vertical spacing */
-  display: block; /* Stack links vertically */
+footer a:hover {
+  text-decoration: underline;
+  color: #0056b3;
 }
 
 footer a:hover {
@@ -185,4 +139,38 @@ footer a:hover {
     padding: 10px;
     width: 90%;
   }
+}
+
+/* Hide unwanted navigation bar on the References page */
+.references-page footer a {
+  display: none !important;
+}
+
+/* Improve Heading Styles */
+h1, h2, h3, h4 {
+  text-align: left; /* Keeps headings aligned left */
+  font-weight: 700; /* Makes them bold for better distinction */
+  color: #111; /* Darker color for better contrast */
+  margin-top: 25px; /* Adds spacing above headings */
+}
+
+.photo-container {
+  width: 250px;
+  height: 320px;
+  margin: 20px auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: none; /* No border */
+  box-shadow: none; /* No shadow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Home Page Photo - Ensures Proper Fit */
+.home-photo {
+  width: 100%; /* Makes the image fill the oval */
+  height: 100%;
+  object-fit: cover; /* Prevents distortion and ensures a good fit */
+  display: block;
 }
