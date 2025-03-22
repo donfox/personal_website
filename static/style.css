@@ -1,9 +1,9 @@
 /* General Body Styling */
 body {
   font-family: var(--font-primary, 'Merriweather', serif); /* Slightly stronger font */
-  font-size: 18px; /* Larger for better readability */
+  font-size: 20px !important; 
   background: var(--color-bg, #ffffff); /* Brighter background for contrast */
-  color: #222; /* Slightly darker for better readability */
+  color: #00224 !important;
   line-height: 1.6; /* More spacing for easier reading */
   margin: 0;
   padding: 20px;
@@ -45,18 +45,31 @@ header address {
   margin: 5px 0;
 }
 
-
+/* Text and List Styling */
 header h1, header h2, header h4 {
   text-align: center;
   width: 100%; /* Ensures full width for perfect centering */
   margin: 10px auto; /* Adds consistent spacing */
 }
 
+p, li {
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+}
 
-/* Text and List Styling */
-p, ul, li {
+p, li {
+  word-break: break-word;
+}
+
+/*p, ul, li {
   text-align: left;
   margin-bottom: 1rem;
+}
+*/
+
+p, li,.intro, .construction, section {
+  text-align: justify !important;
 }
 
 /* Image Styling */
@@ -84,7 +97,16 @@ img {
   overflow: hidden;
   clip-path: ellipse(50% 45% at 50% 50%); /* Ensures proper oval shape */
 }
-s
+
+.home-name {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 10px;
+  font-family: 'Lora', serif;
+  color: #002244; /* Dark blue to match your theme */
+}
+
 img:hover {
   border-color: #007bff; /* Changes border to blue on hover */
   transform: scale(1.05); /* Slight zoom effect */
@@ -114,7 +136,7 @@ footer p {
 
 footer a {
   text-decoration: none;
-  color: #007bff;
+  color: #003366;
   font-size: 18px;
   font-weight: 600;
   font-family: 'Lora', serif; /* Ensures footer links use Lora */
@@ -130,7 +152,7 @@ footer a:hover {
 
 footer a:hover {
   text-decoration: underline;
-  color: #0056b3;
+  color: #0055aa;
 }
 
 /* Media Queries for Small Devices */
@@ -147,10 +169,10 @@ footer a:hover {
 }
 
 /* Improve Heading Styles */
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
   text-align: left; /* Keeps headings aligned left */
   font-weight: 700; /* Makes them bold for better distinction */
-  color: #111; /* Darker color for better contrast */
+  color: #001933; /* Darker color for better contrast */
   margin-top: 25px; /* Adds spacing above headings */
 }
 
