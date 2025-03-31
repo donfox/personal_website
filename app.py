@@ -8,6 +8,7 @@ Date: 12/10/2024
 """
 import os
 import sys
+import logging
 from dotenv import load_dotenv
 
 # Ensure the project directory is in Python's module search path
@@ -18,14 +19,11 @@ from routes import register_routes
 dotenv_path = os.path.join(os.path.dirname(__file__), ".env")
 load_dotenv(dotenv_path)
 
-print(f"MAIL_USERNAME in Flask: {os.getenv('MAIL_USERNAME')}")
-print(f"MAIL_PASSWORD in Flask: {os.getenv('MAIL_PASSWORD')[:4]}****")
-
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_mail import Mail
-import logging
+
 from routes import register_routes
 from models import db
 from config import Config
@@ -34,10 +32,6 @@ from utils import validate_config, ensure_file_exists
 # Initialize and configure Flask app.
 app = Flask(__name__)
 app.config.from_object('config.Config')
-
-print("From line 29 of app.py")
-print(f"MAIL_USERNAME: {os.getenv('MAIL_USERNAME')}")
-print(f"MAIL_PASSWORD: {os.getenv('MAIL_PASSWORD')}")
 
 # Initialize extensions
 db.init_app(app)

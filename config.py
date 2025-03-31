@@ -10,6 +10,7 @@ Date: 12/10/2024
 
 from dotenv import load_dotenv
 import os
+ADMIN_PASSWORD = os.environ.get('ADMIN_PASSWORD', 'nodxof123')
 
 from logging.handlers import RotatingFileHandler
 import logging
@@ -17,10 +18,6 @@ import logging
 # Explicitly load .env
 dotenv_path = os.path.join(os.path.dirname(__file__), ".env")
 load_dotenv(dotenv_path)
-
-print("config.py line 21")
-print(f"MAIL_USERNAME in Flask: {os.getenv('MAIL_USERNAME')}")
-print(f"MAIL_PASSWORD in Flask: {os.getenv('MAIL_PASSWORD')[:4]}****")
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 
@@ -41,11 +38,6 @@ class Config:
     MAIL_USERNAME = os.getenv("MAIL_USERNAME")
     MAIL_PASSWORD = os.getenv("MAIL_PASSWORD")
     MAIL_DEFAULT_SENDER = MAIL_USERNAME
-
-    
-    print("Flask App Credentials in config.py line 48")
-    print(f"MAIL_USERNAME={os.getenv('MAIL_USERNAME')}")
-    print(f"MAIL_PASSWORD={os.getenv('MAIL_PASSWORD')[:4]}****")  # Mask password
 
     # Log settings
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))

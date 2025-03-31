@@ -34,10 +34,11 @@ class EmailRequest(db.Model):
     
     __tablename__ = 'EmailRequest'
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), nullable=False)
-    email = db.Column(db.String(120), unique=True, nullable=False)
-    requested_at = db.Column(db.DateTime, default=datetime.utcnow)
-    ip_address = db.Column(db.String(45), nullable=True)  # IPv6 support
+    name = db.Column(db.String(1280), nullable=False)
+    email = db.Column(db.String(128), unique=True)
+    ip_address = db.Column(db.String(64))
+  # requested_at = db.Column(db.DateTime, default=datetim
+    timestamp = db.Column(db.DateTime, default=datetime.utcnow)
 
     def __repr__(self):
         return f"<EmailRequest {self.name}, {self.email}>"
