@@ -12,7 +12,9 @@ from flask import Flask, render_template, redirect, url_for, request, flash, ses
 from sqlalchemy import text
 from models import db, EmailRequest
 from utils import send_email
-from config import ADMIN_PASSWORD
+# from config import ADMIN_PASSWORD
+from flask import current_app
+
 
 logger = logging.getLogger(__name__)
 
@@ -34,9 +36,10 @@ def register_routes(app, mail):
         flash('Entry deleted', 'success')
         return redirect(url_for('admin_dashboard'))        
 
+
     @app.route("/resume", methods=["GET", "POST"])
     def resume():
-        if request.method == "POST":
+        if  request.method == "POST":
             user_name = request.form.get("name")
             user_email = request.form.get("email")
             resume_format = request.form.get("format", "pdf")
@@ -130,47 +133,23 @@ def register_routes(app, mail):
         return render_template('references.html')
 
 
-    # Admin Routes
-    # @app.route('/admin', methods=['GET', 'POST'])
-    # def admin_login():
-    #     if request.method == 'POST':
-    #         if request.form.get('password') == 'nodxof123':
-    #             session['admin_logged_in'] = True
-    #             return redirect(url_for('admin_dashboard'))
-    #         else:
-    #             flash('Invalid password', 'danger')
-
-    #     return render_template('admin_login.html')
-
-
     @app.route('/admin/', methods=['GET', 'POST'])
     def admin_login():
         if request.method == 'POST':
             entered_pw = request.form.get('password')
             logger.info(f"[ADMIN LOGIN] Received password: {entered_pw}")
 
-            if entered_pw == ADMIN_PASSWORD:
+            if entered_pw == current_app.config['ADMIN_PASSWORD']:
                 session['admin_logged_in'] = True
+                flash('Welcome, Admin!', 'success')  # ✅ Add this line
                 logger.info("[ADMIN LOGIN] Password accepted. Redirecting to dashboard.")
-                return redirect(url_for('admin_dashboard'))
+                return redirect(url_for('admin_dashboard'))            
             else:
                 logger.warning("[ADMIN LOGIN] Invalid password entered.")
                 flash('Invalid password', 'danger')
 
         return render_template('admin_login.html')
 
-
-    # @app.route('/admin/dashboard')
-    # def admin_dashboard():
-    #     if not session.get('admin_logged_in'):
-    #         return redirect(url_for('admin_login'))
-    #     try:
-    #         entries = EmailRequest.query.order_by(EmailRequest.timestamp.desc()).all()
-    #         return render_template('admin_dashboard.html',email_requests=entries)
-    #     except Exception as e:
-    #         logger.error(f"Failed to load admin dashboard: {e}")
-    #         flash("Unable to load admin data.", "danger")
-    #         return redirect(url_for("index"))
 
     @app.route('/admin/dashboard')  
     def admin_dashboard():

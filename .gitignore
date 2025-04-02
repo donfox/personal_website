@@ -1,9 +1,45 @@
-# .gitignore
-*.pyc
+# Bytecode
+*.py[cod]
 __pycache__/
-__init__
+
+# Mac system files
 .DS_Store
+
+# Environment / config
 .env
-utilities/
-instance
+*.env*
+.env.*
+
+# Editor/IDE folders
+.vscode/
+.idea/
+*.swp
+
+# SQLite / test DBs
 *.sqlite3
+*.db
+
+# Flask instance folder
+instance/
+
+# Logs
+logs/
+*.log
+
+# Compiled files
+*.egg-info/
+dist/
+build/
+
+# Unit test cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Temporary / local files
+*.bak
+*.tmp
+*~
+
+# Optional: Ignore uploaded/static assets
+# /static/files/
