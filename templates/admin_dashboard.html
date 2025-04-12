@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Resume Request Dashboard</h2>
+
+  <div class="text-end mb-3">
+    <a href="{{ url_for('admin_logout') }}" class="btn btn-outline-secondary">Logout</a>
+  </div>
+
+  {% if email_requests %}
+    <table class="table table-bordered table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>IP Address</th>
+          <th>Timestamp</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for r in email_requests %}
+          <tr>
+            <td>{{ r.name }}</td>
+            <td>{{ r.email }}</td>
+            <td>{{ r.ip_address }}</td>
+            <td>{{ r.timestamp.strftime('%Y-%m-%d %H:%M') }}</td>
+            <td>
+              <!-- Trigger Delete Modal -->
+              <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#confirmDeleteModal{{ r.id }}">
+                Delete
+              </button>
+
+              <!-- Delete Confirmation Modal -->
+              <div class="modal fade" id="confirmDeleteModal{{ r.id }}" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Confirm Deletion</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      Are you sure you want to delete the entry for <strong>{{ r.email }}</strong>?
+                    </div>
+                    <div class="modal-footer">
+                      <form method="POST" action="{{ url_for('admin_delete', request_id=r.id) }}">
+                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p class="text-muted">No resume requests found.</p>
+  {% endif %}
+</div>
+{% endblock %}
