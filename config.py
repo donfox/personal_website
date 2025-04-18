@@ -1,43 +1,42 @@
 """
 config.py
----------
-This file defines the configuration settings for the Flask application,
-including database connection, email server configuration, and logging.
+App configuration file and logging setup.
 
-Author:Don Fox
+Author: Don Fox
 Date: 12/10/2024
 """
 
-from dotenv import load_dotenv
 import os
-ADMIN_PASSWORD = os.environ.get('ADMIN_PASSWORD', 'nodxof123')
-
-from logging.handlers import RotatingFileHandler
 import logging
 
-# Explicitly load .env
-dotenv_path = os.path.join(os.path.dirname(__file__), ".env")
-load_dotenv(dotenv_path)
+from dotenv import load_dotenv
 
-BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+load_dotenv()
+
+from logging.handlers import RotatingFileHandler
 
 class Config:
-    """
-    Configuration class for the Flask application.
-    """
-    # General Flask settings
-    SECRET_KEY = os.environ.get('SECRET_KEY', 'default-secret-key')
-    print(f"SECRET_KEY {SECRET_KEY}")
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///app.db'  
+    SECRET_KEY = os.environ.get("SECRET_KEY")
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL", "sqlite:///site.db")
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+   
 
-    MAIL_SERVER = os.getenv("MAIL_SERVER")
-    MAIL_PORT = int(os.getenv("MAIL_PORT", 587))
-    MAIL_USE_TLS = os.getenv("MAIL_USE_TLS", "True") == "True"
-    MAIL_USE_SSL = os.getenv("MAIL_USE_SSL", "False") == "True"
-    MAIL_USERNAME = os.getenv("MAIL_USERNAME")
-    MAIL_PASSWORD = os.getenv("MAIL_PASSWORD")
-    MAIL_DEFAULT_SENDER = MAIL_USERNAME
+    # SQLALCHEMY_DATABASE_URI = 'sqlite:///app.db'  
+   
+
+    MAIL_SERVER = os.environ.get("MAIL_SERVER")
+    MAIL_PORT = int(os.environ.get("MAIL_PORT", 587))
+    MAIL_USE_TLS = os.environ.get("MAIL_USE_TLS", "True") == "True"
+    MAIL_USE_SSL = os.environ.get("MAIL_USE_SSL", "False") == "True"
+    MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
+    MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
+   # MAIL_DEFAULT_SENDER = MAIL_USERNAME
+
+    ADMIN_PASSWORD = os.environ.get('ADMIN_PASSWORD',)
+
+    SESSION_COOKIE_HTTPONLY = True
+    SESSION_COOKIE_SECURE = False
+    SESSION_COOKIE_SAMESITE = 'Lax'
 
     # Log settings
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -46,15 +45,11 @@ class Config:
     MAX_LOG_SIZE = 100000  # 100 KB
     BACKUP_COUNT = 1
 
+    if not SECRET_KEY or not ADMIN_PASSWORD:
+        raise ValueError("SECRET_KEY and ADMIN_PASSWORD must be set in the environment.")
+
     @staticmethod
     def setup_logging():
-        """
-        Configure the application's logging system.
-
-        - Creates a rotating file handler to log messages to a file.
-        - Logs messages to the console for development purposes.
-        """
-        
         if not os.path.exists(Config.LOG_DIR):
             os.makedirs(Config.LOG_DIR)
 

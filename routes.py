@@ -1,18 +1,18 @@
 """
 routes.py
-Defines the routes for handling requests, including the resume and book pages.
+Defines Flask routes for public and admin functionality.
 
 Author: Don Fox
 Date: 12/10/2024
 """
+
 import os
 import re
 import logging
-from flask import Flask, render_template, redirect, url_for, request, flash, session, abort
+from flask import render_template, redirect, url_for, request, flash, session, abort, current_app
 from sqlalchemy import text
 from models import db, EmailRequest
 from utils import send_email
-from flask import current_app
 
 logger = logging.getLogger(__name__)
 
@@ -21,7 +21,6 @@ def register_routes(app, mail):
     @app.route("/")
     def index():
         return render_template('index.html')
-
 
     @app.route("/resume", methods=["GET", "POST"])
     def resume():
@@ -41,11 +40,8 @@ def register_routes(app, mail):
                 logger.warning(f"Invalid email address provided: {user_email}")
                 return redirect(url_for("resume"))
 
-            # Record request in the database
             try:
                 db.session.execute(text("SELECT 1"))  # Test database connection
-
-                #  **Check if email already exists before inserting**
                 existing_request = EmailRequest.query.filter_by(email=user_email).first()
 
                 if existing_request:
@@ -54,41 +50,34 @@ def register_routes(app, mail):
                     new_request = EmailRequest(name=user_name, email=user_email, ip_address=ip_address)
                     db.session.add(new_request)
                     db.session.commit()
-                    logger.info(f"Inserting request into database: {user_name}, {user_email}, {ip_address}")
+
             except Exception as e:
                 db.session.rollback()    # Prevent Transaction Issues
-
-                # Log the specific error type
-                if "database is locked" in str(e).lower():
-                    logger.error(f"Database locked error: {e}")
-                    flash("Database is currently busy. Please try again in a few moments.", "danger")
-                elif "no such table" in str(e).lower():
-                    logger.error(f"Database schema issue: {e}")
-                    flash("Database table missing. Please contact support.", "danger")
-                else:
-                    logger.error(f"Error recording request: {e}")
-                    flash("An unexpected error occurred while processing your request.", "danger")
-
+                logger.error(f"Database error: {e}")
+                flash("An error occurred. Please try again.", "danger")
                 return redirect(url_for("resume"))
 
-            # Send email
+            # Email logic
             subject = "Your Requested Resume"
             body = f"Hello {user_name},\n\nThank you for your interest. Attached is the resume you requested."
-            
             filename = "Resume.v3.4.pdf" if resume_format == "pdf" else "Resume.v3.4.docx"
             attachment_path = os.path.join(app.static_folder, "files", filename)
   
             logger.info(f"Using MAIL_USERNAME={app.config['MAIL_USERNAME']}")
   
             success, message = send_email(mail, app, user_email, subject, body, attachment_path)
-            if success:
-                flash(message, "success")
-            else:
-                flash(message, "danger")
+            flash(message, "success" if success else "danger")
             return redirect(url_for("resume"))
 
         return render_template("resume.html")
 
+    @app.route("/books")
+    def books():
+        return render_template("books.html")
+
+    @app.route('/references')
+    def references():
+        return render_template('references.html')
 
     @app.route("/secret-email-view-98347")
     def email_requests():
@@ -106,35 +95,25 @@ def register_routes(app, mail):
             flash("An error occurred while retrieving data.", "danger")
             return redirect(url_for("index"))
 
-
-    @app.route("/books")
-    def books():
-        return render_template("books.html")
-
-    @app.route('/references')
-    def references():
-        return render_template('references.html')
-
-
     @app.route('/admin-login', methods=['GET', 'POST'])
     def admin_login():
         if request.method == 'POST':
             entered_pw = request.form.get('password')
-            logger.info(f"[ADMIN LOGIN] Received password: {entered_pw}")
-
             if entered_pw == current_app.config['ADMIN_PASSWORD']:
                 session['admin_logged_in'] = True
                 flash('Welcome, Admin!', 'success')  # ✅ Add this line
-                logger.info("[ADMIN LOGIN] Password accepted. Redirecting to dashboard.")
-             #  return redirect(url_for('admin_dashboard'))
-             #  return redirect(url_for('flaskadmin.index'))  # instead of 'admin_dashboard' 
                 return redirect(url_for('admin.index'))       # not admin_dashboard
             else:
-                logger.warning("[ADMIN LOGIN] Invalid password entered.")
                 flash('Invalid password', 'danger')
 
         return render_template('admin_login.html')
 
+    @app.route('/admin/logout')
+    def admin_logout():
+        session.pop('admin_logged_in', None)
+        return redirect(url_for('index'))    
+        flash("You've been logged out.", "info")
+        return redirect(url_for('index'))
 
     @app.route('/admin/dashboard')  
     def admin_dashboard():
@@ -153,13 +132,6 @@ def register_routes(app, mail):
             flash("Unable to load admin data.", "danger")
             return redirect(url_for("index"))
 
-
-    @app.route('/admin/logout')
-    def admin_logout():
-        session.pop('admin_logged_in', None)
-        return redirect(url_for('index'))    
-
-
     @app.route('/admin/delete/<int:request_id>', methods=['POST'])
     def admin_delete(request_id):
         if not session.get('admin_logged_in'):
@@ -174,7 +146,6 @@ def register_routes(app, mail):
         except Exception as e:
             db.session.rollback()
             logger.error(f"Error deleting entry: {e}")
-            flash('Failed to delete entry.', 'danger')
         return redirect(url_for('admin_dashboard'))
 
 
