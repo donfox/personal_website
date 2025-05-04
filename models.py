@@ -22,3 +22,15 @@ class EmailRequest(db.Model):
 
     def __repr__(self):
         return f"<EmailRequest {self.name}, {self.email}>"
+
+class UserMessage(db.Model):
+    __tablename__ = 'UserMessage'
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(128), nullable=False)
+    email = db.Column(db.String(128), nullable=False)
+    subject = db.Column(db.String(256))
+    message = db.Column(db.Text)
+    timestamp = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc))
+
+    def __repr__(self):
+        return f"<UserMessage from {self.name} ({self.email})>"

@@ -139,9 +139,9 @@ footer a {
   color: #003366;
   font-size: 18px;
   font-weight: 600;
-  font-family: 'Lora', serif; /* Ensures footer links use Lora */
-  margin: 8px 0;
-  display: block;
+  font-family: 'Lora', serif;
+  margin: 8px 10;
+  display: inline-block;
   transition: color 0.3s ease-in-out;
 }
 

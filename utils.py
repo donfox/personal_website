@@ -4,13 +4,14 @@ Utility functions used across the application.
 
 Author: Don Fox
 """
-
+import re
 import os
 import logging
 from flask_mail import Message
 
 logger = logging.getLogger(__name__)
 
+EMAIL_REGEX = re.compile(r"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$")
 
 def validate_config(app):
     """Ensure all required mail configs are set and log any missing."""
@@ -27,6 +28,11 @@ def ensure_file_exists(file_path):
     """Log a warning if a required file is missing."""
     if not os.path.isfile(file_path):
         logger.warning(f"File not found: {file_path}")
+
+
+def validate_email(email):
+    """Validate email format using standard regex."""
+    return re.match(EMAIL_REGEX, email) is not None
 
 
 def send_email(mail, app, recipient, subject, body, attachment_path=None):
