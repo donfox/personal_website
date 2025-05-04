@@ -1,0 +1,21 @@
+{% extends "admin/custom_admin_base.html" %}
+
+{% block title %}Resume Requests{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+    <h2>Resume Requests</h2>
+    {% if email_requests %}
+        <ul class="list-group">
+            {% for req in email_requests %}
+                <li class="list-group-item">
+                    <strong>{{ req.name }}</strong> ({{ req.email }})<br>
+                    <small>IP: {{ req.ip_address }} | Requested at: {{ req.timestamp }}</small>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No resume requests found.</p>
+    {% endif %}
+</div>
+{% endblock %}

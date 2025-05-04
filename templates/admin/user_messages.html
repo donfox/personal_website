@@ -1,0 +1,23 @@
+{% extends "admin/custom_admin_base.html" %}
+
+{% block title %}User Messages{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+    <h2>User Messages</h2>
+    {% if user_messages %}
+        <ul class="list-group">
+            {% for msg in user_messages %}
+                <li class="list-group-item">
+                    <strong>{{ msg.name }}</strong> ({{ msg.email }})<br>
+                    Subject: {{ msg.subject }}<br>
+                    Message: {{ msg.message }}<br>
+                    <small>{{ msg.timestamp }}</small>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No user messages found.</p>
+    {% endif %}
+</div>
+{% endblock %}

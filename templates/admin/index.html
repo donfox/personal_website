@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block content %}
+<h2>Admin Dashboard</h2>
+<ul>
+  <li><a href="{{ url_for('admin_user_messages') }}">View Contact Requests</a></li>
+  <li><a href="{{ url_for('admin_email_requests') }}">View Resume Requests</a></li>
+</ul>
+<a href="{{ url_for('admin_logout') }}">Logout</a>
+{% endblock %}
